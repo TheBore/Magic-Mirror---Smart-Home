@@ -1,0 +1,14 @@
+# Don't ignore the .gitignore itself
+!.gitignore
+
+# Ignore hidden files
+.*
+
+# Ignore Python virtual environments
+venv/
+
+# Ignore Node modules
+node_modules/
+
+# Ignore audio files folder
+audio_files/
