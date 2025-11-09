@@ -1,0 +1,183 @@
+[1.095s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[1.095s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=4, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0xffffaadca870>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0xffffaaf76f30>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0xffffaaf76f30>>, mixin_verb=('build',))
+[1.477s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[1.478s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[1.479s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[1.479s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[1.479s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[1.480s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[1.480s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/pi/ros2_ws'
+[1.481s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[1.481s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[1.482s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[1.483s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[1.483s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[1.483s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[1.483s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[1.484s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[1.484s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[1.727s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[1.728s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[1.728s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[1.728s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[1.729s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[1.730s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[1.730s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[1.731s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[1.732s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[1.733s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[1.734s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[1.735s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[1.735s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[1.736s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[1.736s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[1.737s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[1.738s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[1.738s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[1.738s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[1.739s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[1.739s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[1.739s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[1.740s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[1.740s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[1.741s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[1.741s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[1.741s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[1.742s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[1.743s] Level 1:colcon.colcon_core.package_identification:_identify(src/sps30_listener) by extensions ['ignore', 'ignore_ament_install']
+[1.743s] Level 1:colcon.colcon_core.package_identification:_identify(src/sps30_listener) by extension 'ignore'
+[1.744s] Level 1:colcon.colcon_core.package_identification:_identify(src/sps30_listener) by extension 'ignore_ament_install'
+[1.745s] Level 1:colcon.colcon_core.package_identification:_identify(src/sps30_listener) by extensions ['colcon_pkg']
+[1.745s] Level 1:colcon.colcon_core.package_identification:_identify(src/sps30_listener) by extension 'colcon_pkg'
+[1.745s] Level 1:colcon.colcon_core.package_identification:_identify(src/sps30_listener) by extensions ['colcon_meta']
+[1.745s] Level 1:colcon.colcon_core.package_identification:_identify(src/sps30_listener) by extension 'colcon_meta'
+[1.746s] Level 1:colcon.colcon_core.package_identification:_identify(src/sps30_listener) by extensions ['ros']
+[1.746s] Level 1:colcon.colcon_core.package_identification:_identify(src/sps30_listener) by extension 'ros'
+[1.763s] DEBUG:colcon.colcon_core.package_identification:Package 'src/sps30_listener' with type 'ros.ament_python' and name 'sps30_listener'
+[1.765s] Level 1:colcon.colcon_core.package_identification:_identify(src/sps30_publisher) by extensions ['ignore', 'ignore_ament_install']
+[1.765s] Level 1:colcon.colcon_core.package_identification:_identify(src/sps30_publisher) by extension 'ignore'
+[1.766s] Level 1:colcon.colcon_core.package_identification:_identify(src/sps30_publisher) by extension 'ignore_ament_install'
+[1.767s] Level 1:colcon.colcon_core.package_identification:_identify(src/sps30_publisher) by extensions ['colcon_pkg']
+[1.767s] Level 1:colcon.colcon_core.package_identification:_identify(src/sps30_publisher) by extension 'colcon_pkg'
+[1.767s] Level 1:colcon.colcon_core.package_identification:_identify(src/sps30_publisher) by extensions ['colcon_meta']
+[1.767s] Level 1:colcon.colcon_core.package_identification:_identify(src/sps30_publisher) by extension 'colcon_meta'
+[1.768s] Level 1:colcon.colcon_core.package_identification:_identify(src/sps30_publisher) by extensions ['ros']
+[1.768s] Level 1:colcon.colcon_core.package_identification:_identify(src/sps30_publisher) by extension 'ros'
+[1.772s] DEBUG:colcon.colcon_core.package_identification:Package 'src/sps30_publisher' with type 'ros.ament_python' and name 'sps30_publisher'
+[1.772s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[1.773s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[1.773s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[1.773s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[1.773s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[1.930s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[1.930s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[1.939s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/home/pi/ros2_ws/install/sps30_ros' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[1.948s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 2 installed packages in /home/pi/ros2_ws/install
+[1.970s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 285 installed packages in /opt/ros/jazzy
+[1.978s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[2.488s] Level 5:colcon.colcon_core.verb:set package 'sps30_listener' build argument 'cmake_args' from command line to 'None'
+[2.489s] Level 5:colcon.colcon_core.verb:set package 'sps30_listener' build argument 'cmake_target' from command line to 'None'
+[2.489s] Level 5:colcon.colcon_core.verb:set package 'sps30_listener' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[2.489s] Level 5:colcon.colcon_core.verb:set package 'sps30_listener' build argument 'cmake_clean_cache' from command line to 'False'
+[2.489s] Level 5:colcon.colcon_core.verb:set package 'sps30_listener' build argument 'cmake_clean_first' from command line to 'False'
+[2.490s] Level 5:colcon.colcon_core.verb:set package 'sps30_listener' build argument 'cmake_force_configure' from command line to 'False'
+[2.490s] Level 5:colcon.colcon_core.verb:set package 'sps30_listener' build argument 'ament_cmake_args' from command line to 'None'
+[2.490s] Level 5:colcon.colcon_core.verb:set package 'sps30_listener' build argument 'catkin_cmake_args' from command line to 'None'
+[2.490s] Level 5:colcon.colcon_core.verb:set package 'sps30_listener' build argument 'catkin_skip_building_tests' from command line to 'False'
+[2.491s] DEBUG:colcon.colcon_core.verb:Building package 'sps30_listener' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/pi/ros2_ws/build/sps30_listener', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/pi/ros2_ws/install/sps30_listener', 'merge_install': False, 'path': '/home/pi/ros2_ws/src/sps30_listener', 'symlink_install': False, 'test_result_base': None}
+[2.493s] Level 5:colcon.colcon_core.verb:set package 'sps30_publisher' build argument 'cmake_args' from command line to 'None'
+[2.494s] Level 5:colcon.colcon_core.verb:set package 'sps30_publisher' build argument 'cmake_target' from command line to 'None'
+[2.494s] Level 5:colcon.colcon_core.verb:set package 'sps30_publisher' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[2.494s] Level 5:colcon.colcon_core.verb:set package 'sps30_publisher' build argument 'cmake_clean_cache' from command line to 'False'
+[2.494s] Level 5:colcon.colcon_core.verb:set package 'sps30_publisher' build argument 'cmake_clean_first' from command line to 'False'
+[2.495s] Level 5:colcon.colcon_core.verb:set package 'sps30_publisher' build argument 'cmake_force_configure' from command line to 'False'
+[2.495s] Level 5:colcon.colcon_core.verb:set package 'sps30_publisher' build argument 'ament_cmake_args' from command line to 'None'
+[2.495s] Level 5:colcon.colcon_core.verb:set package 'sps30_publisher' build argument 'catkin_cmake_args' from command line to 'None'
+[2.495s] Level 5:colcon.colcon_core.verb:set package 'sps30_publisher' build argument 'catkin_skip_building_tests' from command line to 'False'
+[2.496s] DEBUG:colcon.colcon_core.verb:Building package 'sps30_publisher' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/pi/ros2_ws/build/sps30_publisher', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/pi/ros2_ws/install/sps30_publisher', 'merge_install': False, 'path': '/home/pi/ros2_ws/src/sps30_publisher', 'symlink_install': False, 'test_result_base': None}
+[2.497s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[2.503s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[2.505s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/pi/ros2_ws/src/sps30_listener' with build type 'ament_python'
+[2.506s] Level 1:colcon.colcon_core.shell:create_environment_hook('sps30_listener', 'ament_prefix_path')
+[2.524s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[2.526s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pi/ros2_ws/install/sps30_listener/share/sps30_listener/hook/ament_prefix_path.ps1'
+[2.532s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/pi/ros2_ws/install/sps30_listener/share/sps30_listener/hook/ament_prefix_path.dsv'
+[2.536s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pi/ros2_ws/install/sps30_listener/share/sps30_listener/hook/ament_prefix_path.sh'
+[2.542s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.542s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.580s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/pi/ros2_ws/src/sps30_publisher' with build type 'ament_python'
+[2.581s] Level 1:colcon.colcon_core.shell:create_environment_hook('sps30_publisher', 'ament_prefix_path')
+[2.583s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pi/ros2_ws/install/sps30_publisher/share/sps30_publisher/hook/ament_prefix_path.ps1'
+[2.589s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/pi/ros2_ws/install/sps30_publisher/share/sps30_publisher/hook/ament_prefix_path.dsv'
+[2.592s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pi/ros2_ws/install/sps30_publisher/share/sps30_publisher/hook/ament_prefix_path.sh'
+[2.598s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.599s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[4.887s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/pi/ros2_ws/src/sps30_listener'
+[4.888s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[4.889s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[7.171s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/pi/ros2_ws/src/sps30_publisher'
+[7.173s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[7.173s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[14.796s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/pi/ros2_ws/build/sps30_listener': PYTHONPATH=/home/pi/ros2_ws/build/sps30_listener/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pi/ros2_ws/install/sps30_listener/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --uninstall --editable --build-directory /home/pi/ros2_ws/build/sps30_listener/build
+[14.870s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/pi/ros2_ws/build/sps30_publisher': PYTHONPATH=/home/pi/ros2_ws/build/sps30_publisher/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pi/ros2_ws/install/sps30_publisher/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --uninstall --editable --build-directory /home/pi/ros2_ws/build/sps30_publisher/build
+[22.088s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/pi/ros2_ws/build/sps30_listener' returned '0': PYTHONPATH=/home/pi/ros2_ws/build/sps30_listener/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pi/ros2_ws/install/sps30_listener/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --uninstall --editable --build-directory /home/pi/ros2_ws/build/sps30_listener/build
+[22.102s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/pi/ros2_ws/src/sps30_listener': PYTHONPATH=/home/pi/ros2_ws/build/sps30_listener/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pi/ros2_ws/install/sps30_listener/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/sps30_listener build --build-base /home/pi/ros2_ws/build/sps30_listener/build install --record /home/pi/ros2_ws/build/sps30_listener/install.log --single-version-externally-managed install_data --force
+[22.198s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/pi/ros2_ws/build/sps30_publisher' returned '0': PYTHONPATH=/home/pi/ros2_ws/build/sps30_publisher/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pi/ros2_ws/install/sps30_publisher/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --uninstall --editable --build-directory /home/pi/ros2_ws/build/sps30_publisher/build
+[22.211s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/pi/ros2_ws/src/sps30_publisher': PYTHONPATH=/home/pi/ros2_ws/build/sps30_publisher/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pi/ros2_ws/install/sps30_publisher/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/sps30_publisher build --build-base /home/pi/ros2_ws/build/sps30_publisher/build install --record /home/pi/ros2_ws/build/sps30_publisher/install.log --single-version-externally-managed install_data --force
+[29.401s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/pi/ros2_ws/src/sps30_listener' returned '0': PYTHONPATH=/home/pi/ros2_ws/build/sps30_listener/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pi/ros2_ws/install/sps30_listener/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/sps30_listener build --build-base /home/pi/ros2_ws/build/sps30_listener/build install --record /home/pi/ros2_ws/build/sps30_listener/install.log --single-version-externally-managed install_data --force
+[29.432s] Level 1:colcon.colcon_core.environment:checking '/home/pi/ros2_ws/install/sps30_listener' for CMake module files
+[29.438s] Level 1:colcon.colcon_core.environment:checking '/home/pi/ros2_ws/install/sps30_listener' for CMake config files
+[29.447s] Level 1:colcon.colcon_core.environment:checking '/home/pi/ros2_ws/install/sps30_listener/lib'
+[29.448s] Level 1:colcon.colcon_core.environment:checking '/home/pi/ros2_ws/install/sps30_listener/bin'
+[29.449s] Level 1:colcon.colcon_core.environment:checking '/home/pi/ros2_ws/install/sps30_listener/lib/pkgconfig/sps30_listener.pc'
+[29.452s] Level 1:colcon.colcon_core.environment:checking '/home/pi/ros2_ws/install/sps30_listener/lib/python3.12/site-packages'
+[29.454s] Level 1:colcon.colcon_core.shell:create_environment_hook('sps30_listener', 'pythonpath')
+[29.456s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pi/ros2_ws/install/sps30_listener/share/sps30_listener/hook/pythonpath.ps1'
+[29.460s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/pi/ros2_ws/install/sps30_listener/share/sps30_listener/hook/pythonpath.dsv'
+[29.465s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pi/ros2_ws/install/sps30_listener/share/sps30_listener/hook/pythonpath.sh'
+[29.471s] Level 1:colcon.colcon_core.environment:checking '/home/pi/ros2_ws/install/sps30_listener/bin'
+[29.472s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(sps30_listener)
+[29.474s] INFO:colcon.colcon_core.shell:Creating package script '/home/pi/ros2_ws/install/sps30_listener/share/sps30_listener/package.ps1'
+[29.481s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/pi/ros2_ws/install/sps30_listener/share/sps30_listener/package.dsv'
+[29.487s] INFO:colcon.colcon_core.shell:Creating package script '/home/pi/ros2_ws/install/sps30_listener/share/sps30_listener/package.sh'
+[29.495s] INFO:colcon.colcon_core.shell:Creating package script '/home/pi/ros2_ws/install/sps30_listener/share/sps30_listener/package.bash'
+[29.501s] INFO:colcon.colcon_core.shell:Creating package script '/home/pi/ros2_ws/install/sps30_listener/share/sps30_listener/package.zsh'
+[29.507s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/pi/ros2_ws/install/sps30_listener/share/colcon-core/packages/sps30_listener)
+[29.584s] Level 1:colcon.colcon_core.environment:checking '/home/pi/ros2_ws/install/sps30_publisher' for CMake module files
+[29.587s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/pi/ros2_ws/src/sps30_publisher' returned '0': PYTHONPATH=/home/pi/ros2_ws/build/sps30_publisher/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pi/ros2_ws/install/sps30_publisher/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/sps30_publisher build --build-base /home/pi/ros2_ws/build/sps30_publisher/build install --record /home/pi/ros2_ws/build/sps30_publisher/install.log --single-version-externally-managed install_data --force
+[29.593s] Level 1:colcon.colcon_core.environment:checking '/home/pi/ros2_ws/install/sps30_publisher' for CMake config files
+[29.601s] Level 1:colcon.colcon_core.environment:checking '/home/pi/ros2_ws/install/sps30_publisher/lib'
+[29.602s] Level 1:colcon.colcon_core.environment:checking '/home/pi/ros2_ws/install/sps30_publisher/bin'
+[29.602s] Level 1:colcon.colcon_core.environment:checking '/home/pi/ros2_ws/install/sps30_publisher/lib/pkgconfig/sps30_publisher.pc'
+[29.605s] Level 1:colcon.colcon_core.environment:checking '/home/pi/ros2_ws/install/sps30_publisher/lib/python3.12/site-packages'
+[29.606s] Level 1:colcon.colcon_core.shell:create_environment_hook('sps30_publisher', 'pythonpath')
+[29.608s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pi/ros2_ws/install/sps30_publisher/share/sps30_publisher/hook/pythonpath.ps1'
+[29.611s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/pi/ros2_ws/install/sps30_publisher/share/sps30_publisher/hook/pythonpath.dsv'
+[29.615s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pi/ros2_ws/install/sps30_publisher/share/sps30_publisher/hook/pythonpath.sh'
+[29.621s] Level 1:colcon.colcon_core.environment:checking '/home/pi/ros2_ws/install/sps30_publisher/bin'
+[29.622s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(sps30_publisher)
+[29.624s] INFO:colcon.colcon_core.shell:Creating package script '/home/pi/ros2_ws/install/sps30_publisher/share/sps30_publisher/package.ps1'
+[29.628s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/pi/ros2_ws/install/sps30_publisher/share/sps30_publisher/package.dsv'
+[29.633s] INFO:colcon.colcon_core.shell:Creating package script '/home/pi/ros2_ws/install/sps30_publisher/share/sps30_publisher/package.sh'
+[29.637s] INFO:colcon.colcon_core.shell:Creating package script '/home/pi/ros2_ws/install/sps30_publisher/share/sps30_publisher/package.bash'
+[29.640s] INFO:colcon.colcon_core.shell:Creating package script '/home/pi/ros2_ws/install/sps30_publisher/share/sps30_publisher/package.zsh'
+[29.644s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/pi/ros2_ws/install/sps30_publisher/share/colcon-core/packages/sps30_publisher)
+[29.646s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[29.649s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[29.650s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[29.651s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[29.698s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[29.698s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[29.699s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[54.729s] DEBUG:colcon.colcon_notification.desktop_notification.notify2:Failed to initialize notify2: org.freedesktop.DBus.Error.NoReply: Did not receive a reply. Possible causes include: the remote application did not send a reply, the message bus security policy blocked the reply, the reply timeout expired, or the network connection was broken.
+[54.730s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[54.733s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/pi/ros2_ws/install/local_setup.ps1'
+[54.742s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/pi/ros2_ws/install/_local_setup_util_ps1.py'
+[54.752s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/pi/ros2_ws/install/setup.ps1'
+[54.761s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/pi/ros2_ws/install/local_setup.sh'
+[54.765s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/pi/ros2_ws/install/_local_setup_util_sh.py'
+[54.771s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/pi/ros2_ws/install/setup.sh'
+[54.780s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/pi/ros2_ws/install/local_setup.bash'
+[54.784s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/pi/ros2_ws/install/setup.bash'
+[54.792s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/pi/ros2_ws/install/local_setup.zsh'
+[54.798s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/pi/ros2_ws/install/setup.zsh'

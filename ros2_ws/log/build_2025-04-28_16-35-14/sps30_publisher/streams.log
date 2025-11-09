@@ -1,0 +1,24 @@
+[12.152s] Invoking command in '/home/pi/ros2_ws/build/sps30_publisher': PYTHONPATH=/home/pi/ros2_ws/build/sps30_publisher/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pi/ros2_ws/install/sps30_publisher/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/pi/ros2_ws/build/sps30_publisher/build --no-deps symlink_data
+[16.351s] running develop
+[19.303s] running egg_info
+[19.304s] creating sps30_publisher.egg-info
+[19.581s] writing sps30_publisher.egg-info/PKG-INFO
+[19.584s] writing dependency_links to sps30_publisher.egg-info/dependency_links.txt
+[19.586s] writing entry points to sps30_publisher.egg-info/entry_points.txt
+[19.588s] writing requirements to sps30_publisher.egg-info/requires.txt
+[19.589s] writing top-level names to sps30_publisher.egg-info/top_level.txt
+[19.591s] writing manifest file 'sps30_publisher.egg-info/SOURCES.txt'
+[20.153s] reading manifest file 'sps30_publisher.egg-info/SOURCES.txt'
+[20.160s] writing manifest file 'sps30_publisher.egg-info/SOURCES.txt'
+[20.462s] running build_ext
+[20.463s] Creating /home/pi/ros2_ws/install/sps30_publisher/lib/python3.12/site-packages/sps30-publisher.egg-link (link to .)
+[20.470s] Installing sps30_publisher script to /home/pi/ros2_ws/install/sps30_publisher/lib/sps30_publisher
+[20.473s] 
+[20.475s] Installed /home/pi/ros2_ws/build/sps30_publisher
+[20.477s] running symlink_data
+[20.479s] creating /home/pi/ros2_ws/install/sps30_publisher/share/ament_index
+[20.480s] creating /home/pi/ros2_ws/install/sps30_publisher/share/ament_index/resource_index
+[20.482s] creating /home/pi/ros2_ws/install/sps30_publisher/share/ament_index/resource_index/packages
+[20.484s] symbolically linking /home/pi/ros2_ws/build/sps30_publisher/resource/sps30_publisher -> /home/pi/ros2_ws/install/sps30_publisher/share/ament_index/resource_index/packages
+[20.486s] symbolically linking /home/pi/ros2_ws/build/sps30_publisher/package.xml -> /home/pi/ros2_ws/install/sps30_publisher/share/sps30_publisher
+[20.975s] Invoked command in '/home/pi/ros2_ws/build/sps30_publisher' returned '0': PYTHONPATH=/home/pi/ros2_ws/build/sps30_publisher/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pi/ros2_ws/install/sps30_publisher/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/pi/ros2_ws/build/sps30_publisher/build --no-deps symlink_data

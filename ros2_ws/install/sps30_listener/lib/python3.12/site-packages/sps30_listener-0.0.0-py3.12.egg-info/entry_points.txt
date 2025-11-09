@@ -1,0 +1,2 @@
+[console_scripts]
+sps30_listener = sps30_listener.listener:main

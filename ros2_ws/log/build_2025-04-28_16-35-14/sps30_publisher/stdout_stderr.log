@@ -1,0 +1,22 @@
+running develop
+running egg_info
+creating sps30_publisher.egg-info
+writing sps30_publisher.egg-info/PKG-INFO
+writing dependency_links to sps30_publisher.egg-info/dependency_links.txt
+writing entry points to sps30_publisher.egg-info/entry_points.txt
+writing requirements to sps30_publisher.egg-info/requires.txt
+writing top-level names to sps30_publisher.egg-info/top_level.txt
+writing manifest file 'sps30_publisher.egg-info/SOURCES.txt'
+reading manifest file 'sps30_publisher.egg-info/SOURCES.txt'
+writing manifest file 'sps30_publisher.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/pi/ros2_ws/install/sps30_publisher/lib/python3.12/site-packages/sps30-publisher.egg-link (link to .)
+Installing sps30_publisher script to /home/pi/ros2_ws/install/sps30_publisher/lib/sps30_publisher
+
+Installed /home/pi/ros2_ws/build/sps30_publisher
+running symlink_data
+creating /home/pi/ros2_ws/install/sps30_publisher/share/ament_index
+creating /home/pi/ros2_ws/install/sps30_publisher/share/ament_index/resource_index
+creating /home/pi/ros2_ws/install/sps30_publisher/share/ament_index/resource_index/packages
+symbolically linking /home/pi/ros2_ws/build/sps30_publisher/resource/sps30_publisher -> /home/pi/ros2_ws/install/sps30_publisher/share/ament_index/resource_index/packages
+symbolically linking /home/pi/ros2_ws/build/sps30_publisher/package.xml -> /home/pi/ros2_ws/install/sps30_publisher/share/sps30_publisher

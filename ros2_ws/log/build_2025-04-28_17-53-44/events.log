@@ -1,0 +1,365 @@
+[0.000000] (-) TimerEvent: {}
+[0.001875] (sps30_listener) JobQueued: {'identifier': 'sps30_listener', 'dependencies': OrderedDict()}
+[0.003610] (sps30_publisher) JobQueued: {'identifier': 'sps30_publisher', 'dependencies': OrderedDict()}
+[0.004782] (sps30_listener) JobStarted: {'identifier': 'sps30_listener'}
+[0.079087] (sps30_publisher) JobStarted: {'identifier': 'sps30_publisher'}
+[0.098336] (-) TimerEvent: {}
+[0.199648] (-) TimerEvent: {}
+[0.300720] (-) TimerEvent: {}
+[0.401975] (-) TimerEvent: {}
+[0.503077] (-) TimerEvent: {}
+[0.604213] (-) TimerEvent: {}
+[0.705346] (-) TimerEvent: {}
+[0.806562] (-) TimerEvent: {}
+[0.907816] (-) TimerEvent: {}
+[1.008956] (-) TimerEvent: {}
+[1.110077] (-) TimerEvent: {}
+[1.211215] (-) TimerEvent: {}
+[1.312309] (-) TimerEvent: {}
+[1.413521] (-) TimerEvent: {}
+[1.514584] (-) TimerEvent: {}
+[1.615646] (-) TimerEvent: {}
+[1.716626] (-) TimerEvent: {}
+[1.817656] (-) TimerEvent: {}
+[1.918766] (-) TimerEvent: {}
+[2.019921] (-) TimerEvent: {}
+[2.121053] (-) TimerEvent: {}
+[2.222265] (-) TimerEvent: {}
+[2.323673] (-) TimerEvent: {}
+[2.424836] (-) TimerEvent: {}
+[2.527378] (-) TimerEvent: {}
+[2.628545] (-) TimerEvent: {}
+[2.729623] (-) TimerEvent: {}
+[2.830760] (-) TimerEvent: {}
+[2.931943] (-) TimerEvent: {}
+[3.033106] (-) TimerEvent: {}
+[3.134220] (-) TimerEvent: {}
+[3.235309] (-) TimerEvent: {}
+[3.336525] (-) TimerEvent: {}
+[3.437618] (-) TimerEvent: {}
+[3.538681] (-) TimerEvent: {}
+[3.639763] (-) TimerEvent: {}
+[3.740996] (-) TimerEvent: {}
+[3.842073] (-) TimerEvent: {}
+[3.943186] (-) TimerEvent: {}
+[4.044309] (-) TimerEvent: {}
+[4.145521] (-) TimerEvent: {}
+[4.246580] (-) TimerEvent: {}
+[4.347609] (-) TimerEvent: {}
+[4.448712] (-) TimerEvent: {}
+[4.549998] (-) TimerEvent: {}
+[4.651238] (-) TimerEvent: {}
+[4.752612] (-) TimerEvent: {}
+[4.853877] (-) TimerEvent: {}
+[4.955173] (-) TimerEvent: {}
+[5.056545] (-) TimerEvent: {}
+[5.157735] (-) TimerEvent: {}
+[5.259052] (-) TimerEvent: {}
+[5.360489] (-) TimerEvent: {}
+[5.461659] (-) TimerEvent: {}
+[5.562931] (-) TimerEvent: {}
+[5.664090] (-) TimerEvent: {}
+[5.765359] (-) TimerEvent: {}
+[5.866598] (-) TimerEvent: {}
+[5.967751] (-) TimerEvent: {}
+[6.068986] (-) TimerEvent: {}
+[6.170209] (-) TimerEvent: {}
+[6.271343] (-) TimerEvent: {}
+[6.372584] (-) TimerEvent: {}
+[6.473638] (-) TimerEvent: {}
+[6.574829] (-) TimerEvent: {}
+[6.676028] (-) TimerEvent: {}
+[6.777379] (-) TimerEvent: {}
+[6.878594] (-) TimerEvent: {}
+[6.979802] (-) TimerEvent: {}
+[7.081053] (-) TimerEvent: {}
+[7.182304] (-) TimerEvent: {}
+[7.283610] (-) TimerEvent: {}
+[7.384772] (-) TimerEvent: {}
+[7.486778] (-) TimerEvent: {}
+[7.587971] (-) TimerEvent: {}
+[7.689264] (-) TimerEvent: {}
+[7.790615] (-) TimerEvent: {}
+[7.891791] (-) TimerEvent: {}
+[7.993737] (-) TimerEvent: {}
+[8.094936] (-) TimerEvent: {}
+[8.196197] (-) TimerEvent: {}
+[8.297488] (-) TimerEvent: {}
+[8.398619] (-) TimerEvent: {}
+[8.499802] (-) TimerEvent: {}
+[8.601097] (-) TimerEvent: {}
+[8.702316] (-) TimerEvent: {}
+[8.803642] (-) TimerEvent: {}
+[8.905132] (-) TimerEvent: {}
+[9.006496] (-) TimerEvent: {}
+[9.107712] (-) TimerEvent: {}
+[9.209597] (-) TimerEvent: {}
+[9.310736] (-) TimerEvent: {}
+[9.412039] (-) TimerEvent: {}
+[9.513269] (-) TimerEvent: {}
+[9.614595] (-) TimerEvent: {}
+[9.715777] (-) TimerEvent: {}
+[9.817807] (-) TimerEvent: {}
+[9.919112] (-) TimerEvent: {}
+[10.020341] (-) TimerEvent: {}
+[10.121609] (-) TimerEvent: {}
+[10.222789] (-) TimerEvent: {}
+[10.323972] (-) TimerEvent: {}
+[10.425184] (-) TimerEvent: {}
+[10.526376] (-) TimerEvent: {}
+[10.627620] (-) TimerEvent: {}
+[10.728832] (-) TimerEvent: {}
+[10.830047] (-) TimerEvent: {}
+[10.931234] (-) TimerEvent: {}
+[11.032498] (-) TimerEvent: {}
+[11.133636] (-) TimerEvent: {}
+[11.234842] (-) TimerEvent: {}
+[11.336042] (-) TimerEvent: {}
+[11.437375] (-) TimerEvent: {}
+[11.538677] (-) TimerEvent: {}
+[11.639929] (-) TimerEvent: {}
+[11.741169] (-) TimerEvent: {}
+[11.842481] (-) TimerEvent: {}
+[11.943750] (-) TimerEvent: {}
+[12.045265] (-) TimerEvent: {}
+[12.146775] (-) TimerEvent: {}
+[12.248296] (-) TimerEvent: {}
+[12.284100] (sps30_listener) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'develop', '--uninstall', '--editable', '--build-directory', '/home/pi/ros2_ws/build/sps30_listener/build'], 'cwd': '/home/pi/ros2_ws/build/sps30_listener', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'pi', 'SSH_CLIENT': '192.168.1.102 50861 22', 'XDG_SESSION_TYPE': 'tty', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/pi', 'OLDPWD': '/home/pi/ros2_ws/src/sps30_listener', 'SSH_TTY': '/dev/pts/0', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLCON_PREFIX_PATH': '/home/pi/ros2_ws/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'pi', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm', 'XDG_SESSION_ID': '1687', 'PATH': '/home/pi/.local/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': 'localhost:10.0', 'LANG': 'C.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'AMENT_PREFIX_PATH': '/home/pi/ros2_ws/install/sps30_ros:/home/pi/ros2_ws/install/sps30_publisher:/home/pi/ros2_ws/install/sps30_listener:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/home/pi/ros2_ws/build/sps30_listener', 'SSH_CONNECTION': '192.168.1.102 50861 192.168.1.104 22', 'XDG_DATA_DIRS': '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/pi/ros2_ws/build/sps30_listener/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pi/ros2_ws/install/sps30_listener/lib/python3.12/site-packages:/home/pi/ros2_ws/install/sps30_ros/lib/python3.12/site-packages:/home/pi/ros2_ws/build/sps30_publisher:/home/pi/ros2_ws/install/sps30_publisher/lib/python3.12/site-packages:/home/pi/ros2_ws/build/sps30_listener:/home/pi/ros2_ws/install/sps30_listener/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor'}, 'shell': False}
+[12.348618] (-) TimerEvent: {}
+[12.361730] (sps30_publisher) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'develop', '--uninstall', '--editable', '--build-directory', '/home/pi/ros2_ws/build/sps30_publisher/build'], 'cwd': '/home/pi/ros2_ws/build/sps30_publisher', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'pi', 'SSH_CLIENT': '192.168.1.102 50861 22', 'XDG_SESSION_TYPE': 'tty', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/pi', 'OLDPWD': '/home/pi/ros2_ws/src/sps30_listener', 'SSH_TTY': '/dev/pts/0', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLCON_PREFIX_PATH': '/home/pi/ros2_ws/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'pi', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm', 'XDG_SESSION_ID': '1687', 'PATH': '/home/pi/.local/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': 'localhost:10.0', 'LANG': 'C.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'AMENT_PREFIX_PATH': '/home/pi/ros2_ws/install/sps30_ros:/home/pi/ros2_ws/install/sps30_publisher:/home/pi/ros2_ws/install/sps30_listener:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/home/pi/ros2_ws/build/sps30_publisher', 'SSH_CONNECTION': '192.168.1.102 50861 192.168.1.104 22', 'XDG_DATA_DIRS': '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/pi/ros2_ws/build/sps30_publisher/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pi/ros2_ws/install/sps30_publisher/lib/python3.12/site-packages:/home/pi/ros2_ws/install/sps30_ros/lib/python3.12/site-packages:/home/pi/ros2_ws/build/sps30_publisher:/home/pi/ros2_ws/install/sps30_publisher/lib/python3.12/site-packages:/home/pi/ros2_ws/build/sps30_listener:/home/pi/ros2_ws/install/sps30_listener/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor'}, 'shell': False}
+[12.448953] (-) TimerEvent: {}
+[12.550231] (-) TimerEvent: {}
+[12.651528] (-) TimerEvent: {}
+[12.752685] (-) TimerEvent: {}
+[12.854039] (-) TimerEvent: {}
+[12.955320] (-) TimerEvent: {}
+[13.056562] (-) TimerEvent: {}
+[13.157785] (-) TimerEvent: {}
+[13.258992] (-) TimerEvent: {}
+[13.360219] (-) TimerEvent: {}
+[13.461525] (-) TimerEvent: {}
+[13.562630] (-) TimerEvent: {}
+[13.663827] (-) TimerEvent: {}
+[13.765042] (-) TimerEvent: {}
+[13.866274] (-) TimerEvent: {}
+[13.967537] (-) TimerEvent: {}
+[14.068917] (-) TimerEvent: {}
+[14.170187] (-) TimerEvent: {}
+[14.271474] (-) TimerEvent: {}
+[14.372603] (-) TimerEvent: {}
+[14.473795] (-) TimerEvent: {}
+[14.575103] (-) TimerEvent: {}
+[14.676247] (-) TimerEvent: {}
+[14.777527] (-) TimerEvent: {}
+[14.878656] (-) TimerEvent: {}
+[14.979936] (-) TimerEvent: {}
+[15.081271] (-) TimerEvent: {}
+[15.182537] (-) TimerEvent: {}
+[15.283651] (-) TimerEvent: {}
+[15.384829] (-) TimerEvent: {}
+[15.486023] (-) TimerEvent: {}
+[15.587215] (-) TimerEvent: {}
+[15.688355] (-) TimerEvent: {}
+[15.789588] (-) TimerEvent: {}
+[15.890707] (-) TimerEvent: {}
+[15.991998] (-) TimerEvent: {}
+[16.093257] (-) TimerEvent: {}
+[16.194273] (sps30_listener) StdoutLine: {'line': b'running develop\n'}
+[16.195965] (-) TimerEvent: {}
+[16.279571] (sps30_publisher) StdoutLine: {'line': b'running develop\n'}
+[16.296237] (-) TimerEvent: {}
+[16.397515] (-) TimerEvent: {}
+[16.498658] (-) TimerEvent: {}
+[16.599900] (-) TimerEvent: {}
+[16.701145] (-) TimerEvent: {}
+[16.802358] (-) TimerEvent: {}
+[16.903573] (-) TimerEvent: {}
+[17.004649] (-) TimerEvent: {}
+[17.105879] (-) TimerEvent: {}
+[17.207061] (-) TimerEvent: {}
+[17.308348] (-) TimerEvent: {}
+[17.409638] (-) TimerEvent: {}
+[17.510843] (-) TimerEvent: {}
+[17.612043] (-) TimerEvent: {}
+[17.713270] (-) TimerEvent: {}
+[17.814585] (-) TimerEvent: {}
+[17.915743] (-) TimerEvent: {}
+[18.017013] (-) TimerEvent: {}
+[18.118197] (-) TimerEvent: {}
+[18.219535] (-) TimerEvent: {}
+[18.320638] (-) TimerEvent: {}
+[18.421857] (-) TimerEvent: {}
+[18.523175] (-) TimerEvent: {}
+[18.624303] (-) TimerEvent: {}
+[18.725626] (-) TimerEvent: {}
+[18.826847] (-) TimerEvent: {}
+[18.928045] (-) TimerEvent: {}
+[19.029195] (-) TimerEvent: {}
+[19.130524] (-) TimerEvent: {}
+[19.181212] (sps30_listener) StdoutLine: {'line': b'Removing /home/pi/ros2_ws/install/sps30_listener/lib/python3.12/site-packages/sps30-listener.egg-link (link to .)\n'}
+[19.230838] (-) TimerEvent: {}
+[19.293443] (sps30_publisher) StdoutLine: {'line': b'Removing /home/pi/ros2_ws/install/sps30_publisher/lib/python3.12/site-packages/sps30-publisher.egg-link (link to .)\n'}
+[19.331229] (-) TimerEvent: {}
+[19.432777] (-) TimerEvent: {}
+[19.534460] (-) TimerEvent: {}
+[19.583554] (sps30_listener) CommandEnded: {'returncode': 0}
+[19.596832] (sps30_listener) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/sps30_listener', 'build', '--build-base', '/home/pi/ros2_ws/build/sps30_listener/build', 'install', '--record', '/home/pi/ros2_ws/build/sps30_listener/install.log', '--single-version-externally-managed', 'install_data', '--force'], 'cwd': '/home/pi/ros2_ws/src/sps30_listener', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'pi', 'SSH_CLIENT': '192.168.1.102 50861 22', 'XDG_SESSION_TYPE': 'tty', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/pi', 'OLDPWD': '/home/pi/ros2_ws/src/sps30_listener', 'SSH_TTY': '/dev/pts/0', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLCON_PREFIX_PATH': '/home/pi/ros2_ws/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'pi', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm', 'XDG_SESSION_ID': '1687', 'PATH': '/home/pi/.local/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': 'localhost:10.0', 'LANG': 'C.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'AMENT_PREFIX_PATH': '/home/pi/ros2_ws/install/sps30_ros:/home/pi/ros2_ws/install/sps30_publisher:/home/pi/ros2_ws/install/sps30_listener:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/home/pi/ros2_ws/build/sps30_listener', 'SSH_CONNECTION': '192.168.1.102 50861 192.168.1.104 22', 'XDG_DATA_DIRS': '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/pi/ros2_ws/build/sps30_listener/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pi/ros2_ws/install/sps30_listener/lib/python3.12/site-packages:/home/pi/ros2_ws/install/sps30_ros/lib/python3.12/site-packages:/home/pi/ros2_ws/build/sps30_publisher:/home/pi/ros2_ws/install/sps30_publisher/lib/python3.12/site-packages:/home/pi/ros2_ws/build/sps30_listener:/home/pi/ros2_ws/install/sps30_listener/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor'}, 'shell': False}
+[19.634844] (-) TimerEvent: {}
+[19.693980] (sps30_publisher) CommandEnded: {'returncode': 0}
+[19.706700] (sps30_publisher) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/sps30_publisher', 'build', '--build-base', '/home/pi/ros2_ws/build/sps30_publisher/build', 'install', '--record', '/home/pi/ros2_ws/build/sps30_publisher/install.log', '--single-version-externally-managed', 'install_data', '--force'], 'cwd': '/home/pi/ros2_ws/src/sps30_publisher', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'pi', 'SSH_CLIENT': '192.168.1.102 50861 22', 'XDG_SESSION_TYPE': 'tty', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/pi', 'OLDPWD': '/home/pi/ros2_ws/src/sps30_listener', 'SSH_TTY': '/dev/pts/0', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLCON_PREFIX_PATH': '/home/pi/ros2_ws/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'pi', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm', 'XDG_SESSION_ID': '1687', 'PATH': '/home/pi/.local/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': 'localhost:10.0', 'LANG': 'C.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'AMENT_PREFIX_PATH': '/home/pi/ros2_ws/install/sps30_ros:/home/pi/ros2_ws/install/sps30_publisher:/home/pi/ros2_ws/install/sps30_listener:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/home/pi/ros2_ws/build/sps30_publisher', 'SSH_CONNECTION': '192.168.1.102 50861 192.168.1.104 22', 'XDG_DATA_DIRS': '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/pi/ros2_ws/build/sps30_publisher/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pi/ros2_ws/install/sps30_publisher/lib/python3.12/site-packages:/home/pi/ros2_ws/install/sps30_ros/lib/python3.12/site-packages:/home/pi/ros2_ws/build/sps30_publisher:/home/pi/ros2_ws/install/sps30_publisher/lib/python3.12/site-packages:/home/pi/ros2_ws/build/sps30_listener:/home/pi/ros2_ws/install/sps30_listener/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor'}, 'shell': False}
+[19.734994] (-) TimerEvent: {}
+[19.836364] (-) TimerEvent: {}
+[19.937635] (-) TimerEvent: {}
+[20.038944] (-) TimerEvent: {}
+[20.140159] (-) TimerEvent: {}
+[20.241511] (-) TimerEvent: {}
+[20.342653] (-) TimerEvent: {}
+[20.443943] (-) TimerEvent: {}
+[20.545134] (-) TimerEvent: {}
+[20.646586] (-) TimerEvent: {}
+[20.747749] (-) TimerEvent: {}
+[20.849019] (-) TimerEvent: {}
+[20.950297] (-) TimerEvent: {}
+[21.051563] (-) TimerEvent: {}
+[21.152760] (-) TimerEvent: {}
+[21.253972] (-) TimerEvent: {}
+[21.355182] (-) TimerEvent: {}
+[21.456364] (-) TimerEvent: {}
+[21.557599] (-) TimerEvent: {}
+[21.658808] (-) TimerEvent: {}
+[21.760036] (-) TimerEvent: {}
+[21.861285] (-) TimerEvent: {}
+[21.962562] (-) TimerEvent: {}
+[22.063759] (-) TimerEvent: {}
+[22.164971] (-) TimerEvent: {}
+[22.266196] (-) TimerEvent: {}
+[22.367484] (-) TimerEvent: {}
+[22.468629] (-) TimerEvent: {}
+[22.569874] (-) TimerEvent: {}
+[22.671128] (-) TimerEvent: {}
+[22.772316] (-) TimerEvent: {}
+[22.873592] (-) TimerEvent: {}
+[22.974842] (-) TimerEvent: {}
+[23.044808] (sps30_listener) StdoutLine: {'line': b'running egg_info\n'}
+[23.075103] (-) TimerEvent: {}
+[23.138916] (sps30_publisher) StdoutLine: {'line': b'running egg_info\n'}
+[23.175383] (-) TimerEvent: {}
+[23.276596] (-) TimerEvent: {}
+[23.322876] (sps30_listener) StdoutLine: {'line': b'writing ../../build/sps30_listener/sps30_listener.egg-info/PKG-INFO\n'}
+[23.325510] (sps30_listener) StdoutLine: {'line': b'writing dependency_links to ../../build/sps30_listener/sps30_listener.egg-info/dependency_links.txt\n'}
+[23.327693] (sps30_listener) StdoutLine: {'line': b'writing entry points to ../../build/sps30_listener/sps30_listener.egg-info/entry_points.txt\n'}
+[23.329874] (sps30_listener) StdoutLine: {'line': b'writing requirements to ../../build/sps30_listener/sps30_listener.egg-info/requires.txt\n'}
+[23.332208] (sps30_listener) StdoutLine: {'line': b'writing top-level names to ../../build/sps30_listener/sps30_listener.egg-info/top_level.txt\n'}
+[23.376848] (-) TimerEvent: {}
+[23.418763] (sps30_publisher) StdoutLine: {'line': b'writing ../../build/sps30_publisher/sps30_publisher.egg-info/PKG-INFO\n'}
+[23.421364] (sps30_publisher) StdoutLine: {'line': b'writing dependency_links to ../../build/sps30_publisher/sps30_publisher.egg-info/dependency_links.txt\n'}
+[23.423638] (sps30_publisher) StdoutLine: {'line': b'writing entry points to ../../build/sps30_publisher/sps30_publisher.egg-info/entry_points.txt\n'}
+[23.425611] (sps30_publisher) StdoutLine: {'line': b'writing requirements to ../../build/sps30_publisher/sps30_publisher.egg-info/requires.txt\n'}
+[23.427707] (sps30_publisher) StdoutLine: {'line': b'writing top-level names to ../../build/sps30_publisher/sps30_publisher.egg-info/top_level.txt\n'}
+[23.477114] (-) TimerEvent: {}
+[23.578466] (-) TimerEvent: {}
+[23.679636] (-) TimerEvent: {}
+[23.780879] (-) TimerEvent: {}
+[23.882107] (-) TimerEvent: {}
+[23.900513] (sps30_listener) StdoutLine: {'line': b"reading manifest file '../../build/sps30_listener/sps30_listener.egg-info/SOURCES.txt'\n"}
+[23.908376] (sps30_listener) StdoutLine: {'line': b"writing manifest file '../../build/sps30_listener/sps30_listener.egg-info/SOURCES.txt'\n"}
+[23.910368] (sps30_listener) StdoutLine: {'line': b'running build\n'}
+[23.911746] (sps30_listener) StdoutLine: {'line': b'running build_py\n'}
+[23.913481] (sps30_listener) StdoutLine: {'line': b'creating /home/pi/ros2_ws/build/sps30_listener/build\n'}
+[23.915144] (sps30_listener) StdoutLine: {'line': b'creating /home/pi/ros2_ws/build/sps30_listener/build/lib\n'}
+[23.916844] (sps30_listener) StdoutLine: {'line': b'creating /home/pi/ros2_ws/build/sps30_listener/build/lib/sps30_listener\n'}
+[23.918168] (sps30_listener) StdoutLine: {'line': b'copying sps30_listener/listener.py -> /home/pi/ros2_ws/build/sps30_listener/build/lib/sps30_listener\n'}
+[23.920111] (sps30_listener) StdoutLine: {'line': b'copying sps30_listener/__init__.py -> /home/pi/ros2_ws/build/sps30_listener/build/lib/sps30_listener\n'}
+[23.921658] (sps30_listener) StdoutLine: {'line': b'running install\n'}
+[23.982364] (-) TimerEvent: {}
+[23.992734] (sps30_publisher) StdoutLine: {'line': b"reading manifest file '../../build/sps30_publisher/sps30_publisher.egg-info/SOURCES.txt'\n"}
+[23.997095] (sps30_listener) StdoutLine: {'line': b'running install_lib\n'}
+[24.001579] (sps30_publisher) StdoutLine: {'line': b"writing manifest file '../../build/sps30_publisher/sps30_publisher.egg-info/SOURCES.txt'\n"}
+[24.003273] (sps30_publisher) StdoutLine: {'line': b'running build\n'}
+[24.004968] (sps30_publisher) StdoutLine: {'line': b'running build_py\n'}
+[24.006626] (sps30_publisher) StdoutLine: {'line': b'creating /home/pi/ros2_ws/build/sps30_publisher/build\n'}
+[24.008601] (sps30_publisher) StdoutLine: {'line': b'creating /home/pi/ros2_ws/build/sps30_publisher/build/lib\n'}
+[24.010243] (sps30_publisher) StdoutLine: {'line': b'creating /home/pi/ros2_ws/build/sps30_publisher/build/lib/sps30\n'}
+[24.011335] (sps30_publisher) StdoutLine: {'line': b'copying sps30/example.py -> /home/pi/ros2_ws/build/sps30_publisher/build/lib/sps30\n'}
+[24.012994] (sps30_publisher) StdoutLine: {'line': b'copying sps30/run_and_ttn.py -> /home/pi/ros2_ws/build/sps30_publisher/build/lib/sps30\n'}
+[24.015725] (sps30_publisher) StdoutLine: {'line': b'copying sps30/sps30.py -> /home/pi/ros2_ws/build/sps30_publisher/build/lib/sps30\n'}
+[24.018979] (sps30_publisher) StdoutLine: {'line': b'copying sps30/__init__.py -> /home/pi/ros2_ws/build/sps30_publisher/build/lib/sps30\n'}
+[24.021726] (sps30_publisher) StdoutLine: {'line': b'copying sps30/sps30_publisher.py -> /home/pi/ros2_ws/build/sps30_publisher/build/lib/sps30\n'}
+[24.024458] (sps30_publisher) StdoutLine: {'line': b'creating /home/pi/ros2_ws/build/sps30_publisher/build/lib/sps30/i2c\n'}
+[24.026043] (sps30_publisher) StdoutLine: {'line': b'copying sps30/i2c/i2c.py -> /home/pi/ros2_ws/build/sps30_publisher/build/lib/sps30/i2c\n'}
+[24.028495] (sps30_publisher) StdoutLine: {'line': b'copying sps30/i2c/__init__.py -> /home/pi/ros2_ws/build/sps30_publisher/build/lib/sps30/i2c\n'}
+[24.032811] (sps30_publisher) StdoutLine: {'line': b'running install\n'}
+[24.082641] (-) TimerEvent: {}
+[24.111350] (sps30_publisher) StdoutLine: {'line': b'running install_lib\n'}
+[24.182913] (-) TimerEvent: {}
+[24.284368] (-) TimerEvent: {}
+[24.289208] (sps30_listener) StdoutLine: {'line': b'creating /home/pi/ros2_ws/install/sps30_listener/lib/python3.12/site-packages/sps30_listener\n'}
+[24.291011] (sps30_listener) StdoutLine: {'line': b'copying /home/pi/ros2_ws/build/sps30_listener/build/lib/sps30_listener/listener.py -> /home/pi/ros2_ws/install/sps30_listener/lib/python3.12/site-packages/sps30_listener\n'}
+[24.292976] (sps30_listener) StdoutLine: {'line': b'copying /home/pi/ros2_ws/build/sps30_listener/build/lib/sps30_listener/__init__.py -> /home/pi/ros2_ws/install/sps30_listener/lib/python3.12/site-packages/sps30_listener\n'}
+[24.298990] (sps30_listener) StdoutLine: {'line': b'byte-compiling /home/pi/ros2_ws/install/sps30_listener/lib/python3.12/site-packages/sps30_listener/listener.py to listener.cpython-312.pyc\n'}
+[24.308076] (sps30_listener) StdoutLine: {'line': b'byte-compiling /home/pi/ros2_ws/install/sps30_listener/lib/python3.12/site-packages/sps30_listener/__init__.py to __init__.cpython-312.pyc\n'}
+[24.310791] (sps30_listener) StdoutLine: {'line': b'running install_data\n'}
+[24.312602] (sps30_listener) StdoutLine: {'line': b'copying resource/sps30_listener -> /home/pi/ros2_ws/install/sps30_listener/share/ament_index/resource_index/packages\n'}
+[24.314236] (sps30_listener) StdoutLine: {'line': b'copying package.xml -> /home/pi/ros2_ws/install/sps30_listener/share/sps30_listener\n'}
+[24.316078] (sps30_listener) StdoutLine: {'line': b'running install_egg_info\n'}
+[24.384653] (-) TimerEvent: {}
+[24.402078] (sps30_publisher) StdoutLine: {'line': b'creating /home/pi/ros2_ws/install/sps30_publisher/lib/python3.12/site-packages/sps30\n'}
+[24.403713] (sps30_publisher) StdoutLine: {'line': b'copying /home/pi/ros2_ws/build/sps30_publisher/build/lib/sps30/example.py -> /home/pi/ros2_ws/install/sps30_publisher/lib/python3.12/site-packages/sps30\n'}
+[24.405716] (sps30_publisher) StdoutLine: {'line': b'copying /home/pi/ros2_ws/build/sps30_publisher/build/lib/sps30/run_and_ttn.py -> /home/pi/ros2_ws/install/sps30_publisher/lib/python3.12/site-packages/sps30\n'}
+[24.407762] (sps30_publisher) StdoutLine: {'line': b'copying /home/pi/ros2_ws/build/sps30_publisher/build/lib/sps30/sps30.py -> /home/pi/ros2_ws/install/sps30_publisher/lib/python3.12/site-packages/sps30\n'}
+[24.410527] (sps30_publisher) StdoutLine: {'line': b'creating /home/pi/ros2_ws/install/sps30_publisher/lib/python3.12/site-packages/sps30/i2c\n'}
+[24.412085] (sps30_publisher) StdoutLine: {'line': b'copying /home/pi/ros2_ws/build/sps30_publisher/build/lib/sps30/i2c/i2c.py -> /home/pi/ros2_ws/install/sps30_publisher/lib/python3.12/site-packages/sps30/i2c\n'}
+[24.414153] (sps30_publisher) StdoutLine: {'line': b'copying /home/pi/ros2_ws/build/sps30_publisher/build/lib/sps30/i2c/__init__.py -> /home/pi/ros2_ws/install/sps30_publisher/lib/python3.12/site-packages/sps30/i2c\n'}
+[24.416355] (sps30_publisher) StdoutLine: {'line': b'copying /home/pi/ros2_ws/build/sps30_publisher/build/lib/sps30/__init__.py -> /home/pi/ros2_ws/install/sps30_publisher/lib/python3.12/site-packages/sps30\n'}
+[24.418431] (sps30_publisher) StdoutLine: {'line': b'copying /home/pi/ros2_ws/build/sps30_publisher/build/lib/sps30/sps30_publisher.py -> /home/pi/ros2_ws/install/sps30_publisher/lib/python3.12/site-packages/sps30\n'}
+[24.424283] (sps30_publisher) StdoutLine: {'line': b'byte-compiling /home/pi/ros2_ws/install/sps30_publisher/lib/python3.12/site-packages/sps30/example.py to example.cpython-312.pyc\n'}
+[24.429200] (sps30_publisher) StdoutLine: {'line': b'byte-compiling /home/pi/ros2_ws/install/sps30_publisher/lib/python3.12/site-packages/sps30/run_and_ttn.py to run_and_ttn.cpython-312.pyc\n'}
+[24.438153] (sps30_publisher) StdoutLine: {'line': b'byte-compiling /home/pi/ros2_ws/install/sps30_publisher/lib/python3.12/site-packages/sps30/sps30.py to sps30.cpython-312.pyc\n'}
+[24.473538] (sps30_publisher) StdoutLine: {'line': b'byte-compiling /home/pi/ros2_ws/install/sps30_publisher/lib/python3.12/site-packages/sps30/i2c/i2c.py to i2c.cpython-312.pyc\n'}
+[24.478935] (sps30_publisher) StdoutLine: {'line': b'byte-compiling /home/pi/ros2_ws/install/sps30_publisher/lib/python3.12/site-packages/sps30/i2c/__init__.py to __init__.cpython-312.pyc\n'}
+[24.481730] (sps30_publisher) StdoutLine: {'line': b'byte-compiling /home/pi/ros2_ws/install/sps30_publisher/lib/python3.12/site-packages/sps30/__init__.py to __init__.cpython-312.pyc\n'}
+[24.484550] (sps30_publisher) StdoutLine: {'line': b'byte-compiling /home/pi/ros2_ws/install/sps30_publisher/lib/python3.12/site-packages/sps30/sps30_publisher.py to sps30_publisher.cpython-312.pyc\n'}
+[24.486005] (-) TimerEvent: {}
+[24.495232] (sps30_publisher) StdoutLine: {'line': b'running install_data\n'}
+[24.496804] (sps30_publisher) StdoutLine: {'line': b'copying resource/sps30_publisher -> /home/pi/ros2_ws/install/sps30_publisher/share/ament_index/resource_index/packages\n'}
+[24.498466] (sps30_publisher) StdoutLine: {'line': b'copying package.xml -> /home/pi/ros2_ws/install/sps30_publisher/share/sps30_publisher\n'}
+[24.500374] (sps30_publisher) StdoutLine: {'line': b'running install_egg_info\n'}
+[24.586286] (-) TimerEvent: {}
+[24.630482] (sps30_listener) StdoutLine: {'line': b'Copying ../../build/sps30_listener/sps30_listener.egg-info to /home/pi/ros2_ws/install/sps30_listener/lib/python3.12/site-packages/sps30_listener-0.0.0-py3.12.egg-info\n'}
+[24.644715] (sps30_listener) StdoutLine: {'line': b'running install_scripts\n'}
+[24.686612] (-) TimerEvent: {}
+[24.787843] (-) TimerEvent: {}
+[24.793759] (sps30_publisher) StdoutLine: {'line': b'Copying ../../build/sps30_publisher/sps30_publisher.egg-info to /home/pi/ros2_ws/install/sps30_publisher/lib/python3.12/site-packages/sps30_publisher-0.0.0-py3.12.egg-info\n'}
+[24.808040] (sps30_publisher) StdoutLine: {'line': b'running install_scripts\n'}
+[24.888138] (-) TimerEvent: {}
+[24.989342] (-) TimerEvent: {}
+[25.090608] (-) TimerEvent: {}
+[25.191723] (-) TimerEvent: {}
+[25.293034] (-) TimerEvent: {}
+[25.394162] (-) TimerEvent: {}
+[25.495368] (-) TimerEvent: {}
+[25.596606] (-) TimerEvent: {}
+[25.697857] (-) TimerEvent: {}
+[25.799070] (-) TimerEvent: {}
+[25.900339] (-) TimerEvent: {}
+[26.001741] (-) TimerEvent: {}
+[26.103128] (-) TimerEvent: {}
+[26.204378] (-) TimerEvent: {}
+[26.305573] (-) TimerEvent: {}
+[26.406662] (-) TimerEvent: {}
+[26.507961] (-) TimerEvent: {}
+[26.530716] (sps30_listener) StdoutLine: {'line': b'Installing sps30_listener script to /home/pi/ros2_ws/install/sps30_listener/lib/sps30_listener\n'}
+[26.534324] (sps30_listener) StdoutLine: {'line': b"writing list of installed files to '/home/pi/ros2_ws/build/sps30_listener/install.log'\n"}
+[26.608252] (-) TimerEvent: {}
+[26.709615] (-) TimerEvent: {}
+[26.722797] (sps30_publisher) StdoutLine: {'line': b'Installing sps30_publisher script to /home/pi/ros2_ws/install/sps30_publisher/lib/sps30_publisher\n'}
+[26.727972] (sps30_publisher) StdoutLine: {'line': b"writing list of installed files to '/home/pi/ros2_ws/build/sps30_publisher/install.log'\n"}
+[26.810050] (-) TimerEvent: {}
+[26.896940] (sps30_listener) CommandEnded: {'returncode': 0}
+[26.910705] (-) TimerEvent: {}
+[27.008036] (sps30_listener) JobEnded: {'identifier': 'sps30_listener', 'rc': 0}
+[27.012952] (-) TimerEvent: {}
+[27.082233] (sps30_publisher) CommandEnded: {'returncode': 0}
+[27.113358] (-) TimerEvent: {}
+[27.143772] (sps30_publisher) JobEnded: {'identifier': 'sps30_publisher', 'rc': 0}
+[27.151020] (-) EventReactorShutdown: {}

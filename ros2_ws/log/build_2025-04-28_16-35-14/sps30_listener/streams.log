@@ -1,0 +1,24 @@
+[12.196s] Invoking command in '/home/pi/ros2_ws/build/sps30_listener': PYTHONPATH=/home/pi/ros2_ws/build/sps30_listener/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pi/ros2_ws/install/sps30_listener/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/pi/ros2_ws/build/sps30_listener/build --no-deps symlink_data
+[16.364s] running develop
+[19.325s] running egg_info
+[19.327s] creating sps30_listener.egg-info
+[19.609s] writing sps30_listener.egg-info/PKG-INFO
+[19.612s] writing dependency_links to sps30_listener.egg-info/dependency_links.txt
+[19.614s] writing entry points to sps30_listener.egg-info/entry_points.txt
+[19.616s] writing requirements to sps30_listener.egg-info/requires.txt
+[19.618s] writing top-level names to sps30_listener.egg-info/top_level.txt
+[19.619s] writing manifest file 'sps30_listener.egg-info/SOURCES.txt'
+[19.905s] reading manifest file 'sps30_listener.egg-info/SOURCES.txt'
+[19.911s] writing manifest file 'sps30_listener.egg-info/SOURCES.txt'
+[20.208s] running build_ext
+[20.505s] Creating /home/pi/ros2_ws/install/sps30_listener/lib/python3.12/site-packages/sps30-listener.egg-link (link to .)
+[20.510s] Installing sps30_listener script to /home/pi/ros2_ws/install/sps30_listener/lib/sps30_listener
+[20.513s] 
+[20.515s] Installed /home/pi/ros2_ws/build/sps30_listener
+[20.517s] running symlink_data
+[20.519s] creating /home/pi/ros2_ws/install/sps30_listener/share/ament_index
+[20.521s] creating /home/pi/ros2_ws/install/sps30_listener/share/ament_index/resource_index
+[20.523s] creating /home/pi/ros2_ws/install/sps30_listener/share/ament_index/resource_index/packages
+[20.524s] symbolically linking /home/pi/ros2_ws/build/sps30_listener/resource/sps30_listener -> /home/pi/ros2_ws/install/sps30_listener/share/ament_index/resource_index/packages
+[20.526s] symbolically linking /home/pi/ros2_ws/build/sps30_listener/package.xml -> /home/pi/ros2_ws/install/sps30_listener/share/sps30_listener
+[20.939s] Invoked command in '/home/pi/ros2_ws/build/sps30_listener' returned '0': PYTHONPATH=/home/pi/ros2_ws/build/sps30_listener/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pi/ros2_ws/install/sps30_listener/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/pi/ros2_ws/build/sps30_listener/build --no-deps symlink_data

@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: sps30-publisher
+Version: 0.0.0
+Summary: ROS2 package for SPS30 sensor integration (PUBLISHER)
+Maintainer: pi
+Maintainer-email: boris.nikolovski99@gmail.com
+License: MIT

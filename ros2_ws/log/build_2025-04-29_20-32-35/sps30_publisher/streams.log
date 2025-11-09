@@ -1,0 +1,21 @@
+[12.338s] Invoking command in '/home/pi/ros2_ws/src/sps30_publisher': PYTHONPATH=/home/pi/ros2_ws/build/sps30_publisher/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pi/ros2_ws/install/sps30_publisher/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/sps30_publisher build --build-base /home/pi/ros2_ws/build/sps30_publisher/build install --record /home/pi/ros2_ws/build/sps30_publisher/install.log --single-version-externally-managed install_data
+[15.781s] running egg_info
+[16.063s] writing ../../build/sps30_publisher/sps30_publisher.egg-info/PKG-INFO
+[16.072s] writing dependency_links to ../../build/sps30_publisher/sps30_publisher.egg-info/dependency_links.txt
+[16.074s] writing entry points to ../../build/sps30_publisher/sps30_publisher.egg-info/entry_points.txt
+[16.078s] writing requirements to ../../build/sps30_publisher/sps30_publisher.egg-info/requires.txt
+[16.080s] writing top-level names to ../../build/sps30_publisher/sps30_publisher.egg-info/top_level.txt
+[16.645s] reading manifest file '../../build/sps30_publisher/sps30_publisher.egg-info/SOURCES.txt'
+[16.661s] writing manifest file '../../build/sps30_publisher/sps30_publisher.egg-info/SOURCES.txt'
+[16.663s] running build
+[16.665s] running build_py
+[16.670s] running install
+[16.738s] running install_lib
+[17.030s] running install_data
+[17.032s] running install_egg_info
+[17.325s] removing '/home/pi/ros2_ws/install/sps30_publisher/lib/python3.12/site-packages/sps30_publisher-0.0.0-py3.12.egg-info' (and everything under it)
+[17.330s] Copying ../../build/sps30_publisher/sps30_publisher.egg-info to /home/pi/ros2_ws/install/sps30_publisher/lib/python3.12/site-packages/sps30_publisher-0.0.0-py3.12.egg-info
+[17.343s] running install_scripts
+[19.197s] Installing sps30_publisher script to /home/pi/ros2_ws/install/sps30_publisher/lib/sps30_publisher
+[19.202s] writing list of installed files to '/home/pi/ros2_ws/build/sps30_publisher/install.log'
+[19.672s] Invoked command in '/home/pi/ros2_ws/src/sps30_publisher' returned '0': PYTHONPATH=/home/pi/ros2_ws/build/sps30_publisher/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pi/ros2_ws/install/sps30_publisher/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/sps30_publisher build --build-base /home/pi/ros2_ws/build/sps30_publisher/build install --record /home/pi/ros2_ws/build/sps30_publisher/install.log --single-version-externally-managed install_data

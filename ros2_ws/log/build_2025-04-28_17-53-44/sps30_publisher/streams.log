@@ -1,0 +1,53 @@
+[12.285s] Invoking command in '/home/pi/ros2_ws/build/sps30_publisher': PYTHONPATH=/home/pi/ros2_ws/build/sps30_publisher/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pi/ros2_ws/install/sps30_publisher/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --uninstall --editable --build-directory /home/pi/ros2_ws/build/sps30_publisher/build
+[16.199s] running develop
+[19.213s] Removing /home/pi/ros2_ws/install/sps30_publisher/lib/python3.12/site-packages/sps30-publisher.egg-link (link to .)
+[19.613s] Invoked command in '/home/pi/ros2_ws/build/sps30_publisher' returned '0': PYTHONPATH=/home/pi/ros2_ws/build/sps30_publisher/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pi/ros2_ws/install/sps30_publisher/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --uninstall --editable --build-directory /home/pi/ros2_ws/build/sps30_publisher/build
+[19.627s] Invoking command in '/home/pi/ros2_ws/src/sps30_publisher': PYTHONPATH=/home/pi/ros2_ws/build/sps30_publisher/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pi/ros2_ws/install/sps30_publisher/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/sps30_publisher build --build-base /home/pi/ros2_ws/build/sps30_publisher/build install --record /home/pi/ros2_ws/build/sps30_publisher/install.log --single-version-externally-managed install_data --force
+[23.058s] running egg_info
+[23.338s] writing ../../build/sps30_publisher/sps30_publisher.egg-info/PKG-INFO
+[23.340s] writing dependency_links to ../../build/sps30_publisher/sps30_publisher.egg-info/dependency_links.txt
+[23.343s] writing entry points to ../../build/sps30_publisher/sps30_publisher.egg-info/entry_points.txt
+[23.345s] writing requirements to ../../build/sps30_publisher/sps30_publisher.egg-info/requires.txt
+[23.347s] writing top-level names to ../../build/sps30_publisher/sps30_publisher.egg-info/top_level.txt
+[23.912s] reading manifest file '../../build/sps30_publisher/sps30_publisher.egg-info/SOURCES.txt'
+[23.921s] writing manifest file '../../build/sps30_publisher/sps30_publisher.egg-info/SOURCES.txt'
+[23.923s] running build
+[23.924s] running build_py
+[23.926s] creating /home/pi/ros2_ws/build/sps30_publisher/build
+[23.928s] creating /home/pi/ros2_ws/build/sps30_publisher/build/lib
+[23.929s] creating /home/pi/ros2_ws/build/sps30_publisher/build/lib/sps30
+[23.930s] copying sps30/example.py -> /home/pi/ros2_ws/build/sps30_publisher/build/lib/sps30
+[23.932s] copying sps30/run_and_ttn.py -> /home/pi/ros2_ws/build/sps30_publisher/build/lib/sps30
+[23.935s] copying sps30/sps30.py -> /home/pi/ros2_ws/build/sps30_publisher/build/lib/sps30
+[23.938s] copying sps30/__init__.py -> /home/pi/ros2_ws/build/sps30_publisher/build/lib/sps30
+[23.941s] copying sps30/sps30_publisher.py -> /home/pi/ros2_ws/build/sps30_publisher/build/lib/sps30
+[23.943s] creating /home/pi/ros2_ws/build/sps30_publisher/build/lib/sps30/i2c
+[23.945s] copying sps30/i2c/i2c.py -> /home/pi/ros2_ws/build/sps30_publisher/build/lib/sps30/i2c
+[23.947s] copying sps30/i2c/__init__.py -> /home/pi/ros2_ws/build/sps30_publisher/build/lib/sps30/i2c
+[23.952s] running install
+[24.030s] running install_lib
+[24.321s] creating /home/pi/ros2_ws/install/sps30_publisher/lib/python3.12/site-packages/sps30
+[24.323s] copying /home/pi/ros2_ws/build/sps30_publisher/build/lib/sps30/example.py -> /home/pi/ros2_ws/install/sps30_publisher/lib/python3.12/site-packages/sps30
+[24.325s] copying /home/pi/ros2_ws/build/sps30_publisher/build/lib/sps30/run_and_ttn.py -> /home/pi/ros2_ws/install/sps30_publisher/lib/python3.12/site-packages/sps30
+[24.327s] copying /home/pi/ros2_ws/build/sps30_publisher/build/lib/sps30/sps30.py -> /home/pi/ros2_ws/install/sps30_publisher/lib/python3.12/site-packages/sps30
+[24.330s] creating /home/pi/ros2_ws/install/sps30_publisher/lib/python3.12/site-packages/sps30/i2c
+[24.331s] copying /home/pi/ros2_ws/build/sps30_publisher/build/lib/sps30/i2c/i2c.py -> /home/pi/ros2_ws/install/sps30_publisher/lib/python3.12/site-packages/sps30/i2c
+[24.333s] copying /home/pi/ros2_ws/build/sps30_publisher/build/lib/sps30/i2c/__init__.py -> /home/pi/ros2_ws/install/sps30_publisher/lib/python3.12/site-packages/sps30/i2c
+[24.335s] copying /home/pi/ros2_ws/build/sps30_publisher/build/lib/sps30/__init__.py -> /home/pi/ros2_ws/install/sps30_publisher/lib/python3.12/site-packages/sps30
+[24.337s] copying /home/pi/ros2_ws/build/sps30_publisher/build/lib/sps30/sps30_publisher.py -> /home/pi/ros2_ws/install/sps30_publisher/lib/python3.12/site-packages/sps30
+[24.343s] byte-compiling /home/pi/ros2_ws/install/sps30_publisher/lib/python3.12/site-packages/sps30/example.py to example.cpython-312.pyc
+[24.348s] byte-compiling /home/pi/ros2_ws/install/sps30_publisher/lib/python3.12/site-packages/sps30/run_and_ttn.py to run_and_ttn.cpython-312.pyc
+[24.357s] byte-compiling /home/pi/ros2_ws/install/sps30_publisher/lib/python3.12/site-packages/sps30/sps30.py to sps30.cpython-312.pyc
+[24.393s] byte-compiling /home/pi/ros2_ws/install/sps30_publisher/lib/python3.12/site-packages/sps30/i2c/i2c.py to i2c.cpython-312.pyc
+[24.398s] byte-compiling /home/pi/ros2_ws/install/sps30_publisher/lib/python3.12/site-packages/sps30/i2c/__init__.py to __init__.cpython-312.pyc
+[24.401s] byte-compiling /home/pi/ros2_ws/install/sps30_publisher/lib/python3.12/site-packages/sps30/__init__.py to __init__.cpython-312.pyc
+[24.404s] byte-compiling /home/pi/ros2_ws/install/sps30_publisher/lib/python3.12/site-packages/sps30/sps30_publisher.py to sps30_publisher.cpython-312.pyc
+[24.414s] running install_data
+[24.416s] copying resource/sps30_publisher -> /home/pi/ros2_ws/install/sps30_publisher/share/ament_index/resource_index/packages
+[24.418s] copying package.xml -> /home/pi/ros2_ws/install/sps30_publisher/share/sps30_publisher
+[24.419s] running install_egg_info
+[24.713s] Copying ../../build/sps30_publisher/sps30_publisher.egg-info to /home/pi/ros2_ws/install/sps30_publisher/lib/python3.12/site-packages/sps30_publisher-0.0.0-py3.12.egg-info
+[24.727s] running install_scripts
+[26.642s] Installing sps30_publisher script to /home/pi/ros2_ws/install/sps30_publisher/lib/sps30_publisher
+[26.647s] writing list of installed files to '/home/pi/ros2_ws/build/sps30_publisher/install.log'
+[27.003s] Invoked command in '/home/pi/ros2_ws/src/sps30_publisher' returned '0': PYTHONPATH=/home/pi/ros2_ws/build/sps30_publisher/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pi/ros2_ws/install/sps30_publisher/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/sps30_publisher build --build-base /home/pi/ros2_ws/build/sps30_publisher/build install --record /home/pi/ros2_ws/build/sps30_publisher/install.log --single-version-externally-managed install_data --force

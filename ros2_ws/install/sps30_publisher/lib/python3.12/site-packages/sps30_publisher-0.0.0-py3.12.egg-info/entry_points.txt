@@ -1,0 +1,2 @@
+[console_scripts]
+sps30_publisher = sps30.sps30_publisher:main

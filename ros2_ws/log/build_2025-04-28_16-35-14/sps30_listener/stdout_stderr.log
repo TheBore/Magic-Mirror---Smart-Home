@@ -1,0 +1,22 @@
+running develop
+running egg_info
+creating sps30_listener.egg-info
+writing sps30_listener.egg-info/PKG-INFO
+writing dependency_links to sps30_listener.egg-info/dependency_links.txt
+writing entry points to sps30_listener.egg-info/entry_points.txt
+writing requirements to sps30_listener.egg-info/requires.txt
+writing top-level names to sps30_listener.egg-info/top_level.txt
+writing manifest file 'sps30_listener.egg-info/SOURCES.txt'
+reading manifest file 'sps30_listener.egg-info/SOURCES.txt'
+writing manifest file 'sps30_listener.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/pi/ros2_ws/install/sps30_listener/lib/python3.12/site-packages/sps30-listener.egg-link (link to .)
+Installing sps30_listener script to /home/pi/ros2_ws/install/sps30_listener/lib/sps30_listener
+
+Installed /home/pi/ros2_ws/build/sps30_listener
+running symlink_data
+creating /home/pi/ros2_ws/install/sps30_listener/share/ament_index
+creating /home/pi/ros2_ws/install/sps30_listener/share/ament_index/resource_index
+creating /home/pi/ros2_ws/install/sps30_listener/share/ament_index/resource_index/packages
+symbolically linking /home/pi/ros2_ws/build/sps30_listener/resource/sps30_listener -> /home/pi/ros2_ws/install/sps30_listener/share/ament_index/resource_index/packages
+symbolically linking /home/pi/ros2_ws/build/sps30_listener/package.xml -> /home/pi/ros2_ws/install/sps30_listener/share/sps30_listener

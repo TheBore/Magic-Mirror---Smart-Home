@@ -1,0 +1,21 @@
+[12.339s] Invoking command in '/home/pi/ros2_ws/src/sps30_listener': PYTHONPATH=/home/pi/ros2_ws/build/sps30_listener/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pi/ros2_ws/install/sps30_listener/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/sps30_listener build --build-base /home/pi/ros2_ws/build/sps30_listener/build install --record /home/pi/ros2_ws/build/sps30_listener/install.log --single-version-externally-managed install_data
+[15.794s] running egg_info
+[16.075s] writing ../../build/sps30_listener/sps30_listener.egg-info/PKG-INFO
+[16.078s] writing dependency_links to ../../build/sps30_listener/sps30_listener.egg-info/dependency_links.txt
+[16.081s] writing entry points to ../../build/sps30_listener/sps30_listener.egg-info/entry_points.txt
+[16.087s] writing requirements to ../../build/sps30_listener/sps30_listener.egg-info/requires.txt
+[16.092s] writing top-level names to ../../build/sps30_listener/sps30_listener.egg-info/top_level.txt
+[16.657s] reading manifest file '../../build/sps30_listener/sps30_listener.egg-info/SOURCES.txt'
+[16.666s] writing manifest file '../../build/sps30_listener/sps30_listener.egg-info/SOURCES.txt'
+[16.668s] running build
+[16.670s] running build_py
+[16.673s] running install
+[16.744s] running install_lib
+[17.033s] running install_data
+[17.035s] running install_egg_info
+[17.326s] removing '/home/pi/ros2_ws/install/sps30_listener/lib/python3.12/site-packages/sps30_listener-0.0.0-py3.12.egg-info' (and everything under it)
+[17.330s] Copying ../../build/sps30_listener/sps30_listener.egg-info to /home/pi/ros2_ws/install/sps30_listener/lib/python3.12/site-packages/sps30_listener-0.0.0-py3.12.egg-info
+[17.345s] running install_scripts
+[19.203s] Installing sps30_listener script to /home/pi/ros2_ws/install/sps30_listener/lib/sps30_listener
+[19.206s] writing list of installed files to '/home/pi/ros2_ws/build/sps30_listener/install.log'
+[19.578s] Invoked command in '/home/pi/ros2_ws/src/sps30_listener' returned '0': PYTHONPATH=/home/pi/ros2_ws/build/sps30_listener/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pi/ros2_ws/install/sps30_listener/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/sps30_listener build --build-base /home/pi/ros2_ws/build/sps30_listener/build install --record /home/pi/ros2_ws/build/sps30_listener/install.log --single-version-externally-managed install_data
