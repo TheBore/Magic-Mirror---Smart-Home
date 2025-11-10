@@ -308,6 +308,7 @@ module.exports = NodeHelper.create({
         filename: 'request.mp3',
         contentType: 'audio/mpeg',
       });
+      formData.append("model", "whisper-1")
 
       const response = await axios.post(
         this.config.whisperUrl,
