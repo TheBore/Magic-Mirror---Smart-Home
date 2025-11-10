@@ -337,7 +337,7 @@ module.exports = NodeHelper.create({
 
     } catch (error) {
       console.error('Error uploading file:', error);
-      this.sendSocketNotification('ERROR', 'Whisper URL not reachable.');
+      this.sendSocketNotification('ERROR', 'Whisper URL not reachable.', error);
     }
   },
 
