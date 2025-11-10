@@ -304,7 +304,7 @@ module.exports = NodeHelper.create({
       const file = '/tmp/request.mp3';
 
       const formData = new FormData();
-      formData.append('audio_file', fs.createReadStream(file), {
+      formData.append('file', fs.createReadStream(file), {
         filename: 'request.mp3',
         contentType: 'audio/mpeg',
       });
