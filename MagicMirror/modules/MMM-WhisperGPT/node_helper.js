@@ -164,7 +164,7 @@ module.exports = NodeHelper.create({
       this.player = false;
     }
 
-    // this.playSound(this.soundFolder + '/notification_start.mp3');
+    this.playSound(this.soundFolder + '/notification_start.mp3');
     this.sendSocketNotification('START_RECORDING');
 
     // If we're recording, let's stop and clean-up and restart.
@@ -181,7 +181,7 @@ module.exports = NodeHelper.create({
   stopRecording: async function() {
     // Record and convert.
     if (this.state === 'recording') {
-      // this.playSound(this.soundFolder + '/notification_stop.mp3');
+      this.playSound(this.soundFolder + '/notification_stop.mp3');
       this.sendSocketNotification('STOP_RECORDING');
 
       const path = '/tmp/request.wav';
@@ -267,9 +267,9 @@ module.exports = NodeHelper.create({
         writer.on('finish', () => {
           // Play the saved audio file
           console.log('Playing audio reply...');
-          // self.player = PlayerWav.play(tempFilePath, function(err){
-          //   console.log(err);
-          // });
+          self.player = PlayerWav.play(tempFilePath, function(err){
+            console.log(err);
+          });
         });
       })
       .catch(function (error) {
