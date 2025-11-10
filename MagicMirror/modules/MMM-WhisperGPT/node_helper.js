@@ -320,7 +320,10 @@ module.exports = NodeHelper.create({
             encode: true,
             output: 'json',
           },
-          headers: formData.getHeaders(),
+          headers: {
+            ...formData.getHeaders(),
+            'Authorization': `Bearer ${this.config.openAiKey}`
+          },
         }
       );
 
