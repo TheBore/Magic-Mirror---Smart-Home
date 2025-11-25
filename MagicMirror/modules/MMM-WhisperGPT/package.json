@@ -17,7 +17,7 @@
     "time-grunt": "latest"
   },
   "dependencies": {
-    "@picovoice/porcupine-node": "^2.2.0",
+    "@picovoice/porcupine-node": "^3.0.6",
     "@picovoice/pvrecorder-node": "^1.1.2",
     "axios": "^1.4.0",
     "buffer": "^6.0.3",

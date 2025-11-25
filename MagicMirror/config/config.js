@@ -125,13 +125,27 @@ let config = {
                 wsUrl: "ws://localhost:8071" // or use your Pi's IP if needed
             }
         },
+		//{
+  		//	module: "MMM-ChatMock",
+  		//	position: "bottom_right", // or wherever you want it
+  		//	config: {
+    	//		// Optional: can add configs here later
+  		//	}
+		//},
 		{
-  			module: "MMM-ChatMock",
-  			position: "bottom_right", // or wherever you want it
+  			module: 'MMM-WhisperGPT',
+  			position: 'bottom_right', // or wherever you want
   			config: {
-    			// Optional: can add configs here later
+    			// openAiKey: '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',
+				openAiKey: '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',
+				// https://console.picovoice.ai/
+				picovoiceKey: 'mBDg0zn1eoWS7ihtiq4lSsYTvXHPvlD+ib1v0brhfDevHO+hZHVo/Q==',
+				whisperUrl: 'https://api.openai.com/v1/audio/transcriptions',
+				mimic3Url: "https://api.openai.com/v1/audio/speech",
+				debug: true,
+				audioDeviceIndex: 2
   			}
-		},
+		}	
 	]
 };
 
