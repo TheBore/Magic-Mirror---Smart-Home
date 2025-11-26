@@ -60,12 +60,12 @@ Module.register("MMM-WhisperGPTAutomatic", {
       case 'processing':
         content.innerHTML = "Processing sensor data with AI...";
         break;
-      // case 'data_received':
-      //   if (this.dht20Data) {
-      //     content.innerHTML = '<div><span class="bright">Sensor Data: </span></div>';
-      //     content.innerHTML += '<div class="small">' + JSON.stringify(this.dht20Data, null, 2) + '</div>';
-      //   }
-      //   break;
+      case 'data_received':
+        if (this.dht20Data) {
+          // content.innerHTML = '<div><span class="bright">Sensor Data: </span></div>';
+          // content.innerHTML += '<div class="small">' + JSON.stringify(this.dht20Data, null, 2) + '</div>';
+        }
+        break;
       case 'reply_received':
         content.innerHTML = '<div><span class="bright">AI Analysis: </span>' + this.replyText + '</div>';
         break;
