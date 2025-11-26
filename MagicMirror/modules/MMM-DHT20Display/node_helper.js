@@ -23,7 +23,7 @@ module.exports = NodeHelper.create({
 
         try {
           const data = JSON.parse(message);
-          this.sendNotification("DHT20_DATA", data);
+          this.sendSocketNotification("DHT20_DATA", data);
         } catch (e) {
           this.log("Error parsing WebSocket message:", e);
         }

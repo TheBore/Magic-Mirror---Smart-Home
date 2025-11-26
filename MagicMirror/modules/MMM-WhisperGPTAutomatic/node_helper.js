@@ -31,11 +31,7 @@ module.exports = NodeHelper.create({
       this.chain = this.initGPT();
 
       Log.info("MMM-WhisperGPTAutomatic configured and ready to process DHT20 data");
-    }
-  },
-
-  notificationReceived: function (notification, payload) {
-    if (notification === 'DHT20_DATA_RECEIVED') {
+    } else if (notification === 'DHT20_DATA_RECEIVED') {
       // Store latest data
       this.latestData = payload;
 
