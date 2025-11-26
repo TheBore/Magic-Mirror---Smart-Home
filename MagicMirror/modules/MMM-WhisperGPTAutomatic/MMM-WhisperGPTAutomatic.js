@@ -3,7 +3,7 @@
 /* Magic Mirror
  * Module: MMM-WhisperGPTAutomatic
  *
- * By Sergiu Nagailic
+ * By Boris Nikolovski
  * MIT Licensed.
  */
 Module.register("MMM-WhisperGPTAutomatic", {
@@ -123,7 +123,6 @@ Module.register("MMM-WhisperGPTAutomatic", {
 		}
 	},
 
-	// socketNotificationReceived from helper
 	socketNotificationReceived: function (notification, payload) {
     if (notification === 'PROCESSING') {
       Log.info('Processing DHT20 data with AI...');

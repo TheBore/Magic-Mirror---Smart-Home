@@ -50,7 +50,7 @@ Module.register("MMM-DHT20Display", {
     return wrapper;
   },
 
-  socketNotificationReceived(notification, payload) {
+  notificationReceived(notification, payload) {
     if (notification === "DHT20_DATA") {
       this.dht20Data = payload;
       this.dataLoaded = true;

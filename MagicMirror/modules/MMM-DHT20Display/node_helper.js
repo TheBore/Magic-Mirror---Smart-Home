@@ -19,11 +19,11 @@ module.exports = NodeHelper.create({
 
       this.ws.on("message", (message) => {
 
-	this.log("Received message:", message);
+        this.log("Received message:", message);
 
         try {
           const data = JSON.parse(message);
-          this.sendSocketNotification("DHT20_DATA", data);
+          this.sendNotification("DHT20_DATA", data);
         } catch (e) {
           this.log("Error parsing WebSocket message:", e);
         }
