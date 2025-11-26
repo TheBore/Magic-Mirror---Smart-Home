@@ -1,0 +1,26 @@
+{
+  "name": "MMM-WhisperGPT",
+  "version": "1.0.0",
+  "description": "Todo: Insert description here!",
+  "main": "MMM-WhisperGPT.js",
+  "author": "Sergiu Nagailic",
+  "license": "MIT",
+  "devDependencies": {
+    "grunt": "latest",
+    "grunt-eslint": "latest",
+    "grunt-jsonlint": "latest",
+    "grunt-markdownlint": "^1.0.13",
+    "grunt-stylelint": "latest",
+    "grunt-yamllint": "latest",
+    "stylelint": "14.x",
+    "stylelint-config-standard": "23.x",
+    "time-grunt": "latest"
+  },
+  "dependencies": {
+    "axios": "^1.4.0",
+    "langchain": "^0.0.75",
+    "play-sound": "^1.1.5",
+    "querystring": "^0.2.1",
+    "xmldom": "^0.6.0"
+  }
+}
