@@ -14,35 +14,53 @@ module.exports = NodeHelper.create({
   start: function() {
     console.log("Starting node_helper for: " + this.name);
     this.lastProcessedTime = null;
-    this.processingInterval = null;
+    this.processing = false;
+    this.latestData = null;
   },
 
   socketNotificationReceived: function(notification, payload) {
     if (notification === 'CONFIG') {
-      this.config = payload;
+      const defaultConfig = {
+        updateInterval: 60000,
+        debug: false
+      };
+      this.config = Object.assign({}, defaultConfig, payload);
       this.state = 'idle';
       this.chain = this.initGPT();
-      
+
       Log.info("MMM-WhisperGPTAutomatic configured and ready to process DHT20 data");
     }
-    else if (notification === 'PROCESS_DHT20_DATA') {
-      // Process DHT20 data automatically
-      this.processDHT20Data(payload);
+    else if (notification === 'DHT20_DATA_RECEIVED') {
+      // Store latest data
+      this.latestData = payload;
+      
+      // Process with throttling (1 minute intervals)
+      this.processIfIntervalElapsed();
     }
   },
 
-  processDHT20Data: async function(dht20Data) {
-    // Check if we should process (respect update interval)
-    const now = Date.now();
-    if (this.lastProcessedTime && (now - this.lastProcessedTime) < this.config.updateInterval) {
-      if (this.config.debug) {
-        Log.info('Skipping processing - too soon since last update');
-      }
+
+  processIfIntervalElapsed: function() {
+    if (!this.latestData || this.processing) {
       return;
     }
 
-    this.lastProcessedTime = now;
-    this.state = 'processing';
+    const now = Date.now();
+    const interval = this.config && this.config.updateInterval ? this.config.updateInterval : 60000;
+
+    if (this.lastProcessedTime && (now - this.lastProcessedTime) < interval) {
+      return;
+    }
+
+    this.processDHT20Data(this.latestData);
+  },
+
+  processDHT20Data: async function(dht20Data) {
+    if (this.processing) {
+      return;
+    }
+
+    this.processing = true;
     this.sendSocketNotification('PROCESSING');
 
     try {
@@ -52,9 +70,13 @@ module.exports = NodeHelper.create({
       // Get AI reply
       const replyText = await this.getGPTReply(dataPrompt);
       
+      this.lastProcessedTime = Date.now();
     } catch (e) {
       Log.error('Error processing DHT20 data:', e);
       this.sendSocketNotification('ERROR', 'Error processing sensor data with AI.');
+    }
+    finally {
+      this.processing = false;
     }
   },
 

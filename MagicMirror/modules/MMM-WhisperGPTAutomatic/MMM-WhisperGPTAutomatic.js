@@ -109,17 +109,19 @@ Module.register("MMM-WhisperGPTAutomatic", {
 		this.loaded = true;
 	},
 
-
+	// Listen for DHT20_DATA notifications from other modules
 	notificationReceived: function(notification, payload) {
-    if (notification === "DHT20_DATA") {
-      Log.info('DHT20 data received: ', payload);
-      this.dht20Data = payload;
-      this.lastUpdateTime = Date.now();
-      this.state = 'data_received';
-      this.sendSocketNotification('PROCESS_DHT20_DATA', payload);
-      this.updateDom();
-    }
-  },
+		if (notification === "DHT20_DATA") {
+			Log.info('DHT20 data received via notification: ', payload);
+			this.dht20Data = payload;
+			this.lastUpdateTime = Date.now();
+			this.state = 'data_received';
+			this.updateDom();
+			
+			// Forward to node_helper for processing (with throttling)
+			this.sendSocketNotification('DHT20_DATA_RECEIVED', payload);
+		}
+	},
 
 	// socketNotificationReceived from helper
 	socketNotificationReceived: function (notification, payload) {
