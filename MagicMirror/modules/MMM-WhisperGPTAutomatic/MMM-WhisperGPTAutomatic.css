@@ -9,9 +9,21 @@
 
 .MMM-WhisperGPTAutomatic {
   width: 100%;
+  max-width: 500px;
+  display: block;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.MMM-WhisperGPTAutomatic .whispergpt-content {
+  display: block;
+  width: 100%;
+  max-width: 100%;
   text-align: left;
   word-wrap: break-word;
   overflow-wrap: break-word;
+  box-sizing: border-box;
+  position: relative;
 }
 
 .MMM-WhisperGPTAutomatic .bright {

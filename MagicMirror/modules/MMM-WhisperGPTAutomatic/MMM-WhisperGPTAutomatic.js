@@ -45,37 +45,41 @@ Module.register("MMM-WhisperGPTAutomatic", {
   getDom: function() {
     var wrapper = document.createElement("div");
     wrapper.className = "MMM-WhisperGPTAutomatic";
+    
+    var content = document.createElement("div");
+    content.className = "whispergpt-content";
 
     // State-based UI rendering
     switch(this.state) {
       case 'config_issue':
-        wrapper.innerHTML = "Please supply configs (openAiKey)...";
+        content.innerHTML = "Please supply configs (openAiKey)...";
         break;
       case 'idle':
-        wrapper.innerHTML = "Waiting for DHT20 sensor data...";
+        content.innerHTML = "Waiting for DHT20 sensor data...";
         break;
       case 'processing':
-        wrapper.innerHTML = "Processing sensor data with AI...";
+        content.innerHTML = "Processing sensor data with AI...";
         break;
       case 'data_received':
         if (this.dht20Data) {
-          wrapper.innerHTML = '<div><span class="bright">Sensor Data: </span></div>';
-          wrapper.innerHTML += '<div class="small">' + JSON.stringify(this.dht20Data, null, 2) + '</div>';
+          content.innerHTML = '<div><span class="bright">Sensor Data: </span></div>';
+          content.innerHTML += '<div class="small">' + JSON.stringify(this.dht20Data, null, 2) + '</div>';
         }
         break;
       case 'reply_received':
-        wrapper.innerHTML = '<div><span class="bright">AI Analysis: </span>' + this.replyText + '</div>';
+        content.innerHTML = '<div><span class="bright">AI Analysis: </span>' + this.replyText + '</div>';
         break;
       case 'error':
-        wrapper.innerHTML = '<div><span class="bright">ERROR: </span>' + this.error + '</div>';
+        content.innerHTML = '<div><span class="bright">ERROR: </span>' + this.error + '</div>';
         // Reset state in 10 seconds.
         setTimeout(this.resetState.bind(this), 10 * 1000);
         break;
       default:
-        wrapper.innerHTML = "Unknown state";
+        content.innerHTML = "Unknown state";
         break;
     }
 
+    wrapper.appendChild(content);
     return wrapper;
   },
 
