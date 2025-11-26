@@ -44,6 +44,7 @@ Module.register("MMM-WhisperGPTAutomatic", {
 
   getDom: function() {
     var wrapper = document.createElement("div");
+    wrapper.className = "MMM-WhisperGPTAutomatic";
 
     // State-based UI rendering
     switch(this.state) {
@@ -89,7 +90,7 @@ Module.register("MMM-WhisperGPTAutomatic", {
 
 	getStyles: function () {
 		return [
-			"MMM-WhisperGPT.css",
+			"MMM-WhisperGPTAutomatic.css",
 		];
 	},
 
