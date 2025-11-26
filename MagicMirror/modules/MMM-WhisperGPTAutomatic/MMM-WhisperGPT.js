@@ -10,8 +10,6 @@ Module.register("MMM-WhisperGPTAutomatic", {
 	defaults: {
     state: 'idle',
     updateInterval: 60000, // Update every 60 seconds (1 minute)
-    mimic3Url: '',
-    mimic3Voice: 'en_US/cmu-arctic_low#gka',
     openAiKey: '',
     openAiSystemMsg: "You are a helpful AI assistant that analyzes environmental sensor data. Provide concise, friendly insights about temperature, humidity, and comfort levels based on the DHT20 sensor readings.",
     debug: false
@@ -26,8 +24,6 @@ Module.register("MMM-WhisperGPTAutomatic", {
     this.lastUpdateTime = null;
 
     const defaultConfig = {
-      mimic3Url: '',
-      mimic3Voice: 'en_US/cmu-arctic_low#gka',
       openAiKey: '',
       openAiSystemMsg: "You are a helpful AI assistant that analyzes environmental sensor data. Provide concise, friendly insights about temperature, humidity, and comfort levels based on the DHT20 sensor readings.",
       updateInterval: 60000, // Update every 60 seconds
@@ -38,7 +34,7 @@ Module.register("MMM-WhisperGPTAutomatic", {
     this.config = Object.assign({}, defaultConfig, this.config);
 
     // Check if required things are set.
-    if (!this.config.mimic3Url || !this.config.openAiKey) {
+    if (!this.config.openAiKey) {
       this.state = 'config_issue';
     }
     else {
@@ -52,7 +48,7 @@ Module.register("MMM-WhisperGPTAutomatic", {
     // State-based UI rendering
     switch(this.state) {
       case 'config_issue':
-        wrapper.innerHTML = "Please supply configs (mimic3Url, openAiKey)...";
+        wrapper.innerHTML = "Please supply configs (openAiKey)...";
         break;
       case 'idle':
         wrapper.innerHTML = "Waiting for DHT20 sensor data...";
