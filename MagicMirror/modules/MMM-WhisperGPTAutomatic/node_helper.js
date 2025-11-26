@@ -2,23 +2,25 @@ const NodeHelper = require('node_helper');
 const Log = require("logger");
 
 // ChainLang.
-const { ConversationChain } = require("langchain/chains");
-const { ChatOpenAI } = require("langchain/chat_models/openai");
-const { BufferMemory } = require("langchain/memory");
-const {  ChatPromptTemplate,
+const {ConversationChain} = require("langchain/chains");
+const {ChatOpenAI} = require("langchain/chat_models/openai");
+const {BufferMemory} = require("langchain/memory");
+const {
+  ChatPromptTemplate,
   HumanMessagePromptTemplate,
   SystemMessagePromptTemplate,
-  MessagesPlaceholder } = require("langchain/prompts");
+  MessagesPlaceholder
+} = require("langchain/prompts");
 
 module.exports = NodeHelper.create({
-  start: function() {
+  start: function () {
     console.log("Starting node_helper for: " + this.name);
     this.lastProcessedTime = null;
     this.processing = false;
     this.latestData = null;
   },
 
-  socketNotificationReceived: function(notification, payload) {
+  socketNotificationReceived: function (notification, payload) {
     if (notification === 'CONFIG') {
       const defaultConfig = {
         updateInterval: 60000,
@@ -30,17 +32,19 @@ module.exports = NodeHelper.create({
 
       Log.info("MMM-WhisperGPTAutomatic configured and ready to process DHT20 data");
     }
-    else if (notification === 'DHT20_DATA_RECEIVED') {
+  },
+
+  notificationReceived: function (notification, payload) {
+    if (notification === 'DHT20_DATA_RECEIVED') {
       // Store latest data
       this.latestData = payload;
-      
+
       // Process with throttling (1 minute intervals)
       this.processIfIntervalElapsed();
     }
   },
 
-
-  processIfIntervalElapsed: function() {
+  processIfIntervalElapsed: function () {
     if (!this.latestData || this.processing) {
       return;
     }
@@ -55,7 +59,7 @@ module.exports = NodeHelper.create({
     this.processDHT20Data(this.latestData);
   },
 
-  processDHT20Data: async function(dht20Data) {
+  processDHT20Data: async function (dht20Data) {
     if (this.processing) {
       return;
     }
@@ -66,24 +70,23 @@ module.exports = NodeHelper.create({
     try {
       // Format the DHT20 data into a readable prompt
       const dataPrompt = this.formatDHT20Prompt(dht20Data);
-      
+
       // Get AI reply
       const replyText = await this.getGPTReply(dataPrompt);
-      
+
       this.lastProcessedTime = Date.now();
     } catch (e) {
       Log.error('Error processing DHT20 data:', e);
       this.sendSocketNotification('ERROR', 'Error processing sensor data with AI.');
-    }
-    finally {
+    } finally {
       this.processing = false;
     }
   },
 
-  formatDHT20Prompt: function(dht20Data) {
+  formatDHT20Prompt: function (dht20Data) {
     // Create a natural language prompt from the sensor data
     let prompt = "Here are the current environmental sensor readings from a DHT20 sensor:\n\n";
-    
+
     if (dht20Data.temperature_c !== undefined) {
       prompt += `Temperature: ${dht20Data.temperature_c}°C\n`;
     }
@@ -99,9 +102,9 @@ module.exports = NodeHelper.create({
     if (dht20Data.humidex !== undefined) {
       prompt += `Humidex: ${dht20Data.humidex}\n`;
     }
-    
+
     prompt += "\nPlease provide a brief, friendly analysis of these environmental conditions. Include any comfort level assessments and recommendations if appropriate.";
-    
+
     return prompt;
   },
 
@@ -123,13 +126,13 @@ module.exports = NodeHelper.create({
     ]);
 
     return new ConversationChain({
-      memory: new BufferMemory({ returnMessages: true, memoryKey: "history", aiPrefix: "AI" }),
+      memory: new BufferMemory({returnMessages: true, memoryKey: "history", aiPrefix: "AI"}),
       prompt: chatPrompt,
       llm: chat,
     });
   },
 
-  getGPTReply: async function(requestText) {
+  getGPTReply: async function (requestText) {
     console.log('Sending request to OpenAPI: ' + requestText);
     try {
       const response = await this.chain.call({
@@ -140,8 +143,7 @@ module.exports = NodeHelper.create({
       this.sendSocketNotification('REPLY_RECEIVED', response.response);
 
       return response.response;
-    }
-    catch (e) {
+    } catch (e) {
       this.sendSocketNotification('ERROR', 'Error from ChatGPT API.');
     }
   }
