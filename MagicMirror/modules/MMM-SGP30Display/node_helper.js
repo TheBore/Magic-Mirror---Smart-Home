@@ -4,22 +4,39 @@ const WebSocket = require("ws");
 module.exports = NodeHelper.create({
   start() {
     this.ws = null;
+    this.reconnectTimer = null;
+    this.wsUrl = null;
   },
 
   socketNotificationReceived(notification, payload) {
     if (notification === "INIT_WEBSOCKET_SGP30") {
       const wsUrl = payload;
+      
+      // If already connected to the same URL, skip
+      if (this.ws && this.wsUrl === wsUrl && this.ws.readyState === WebSocket.OPEN) {
+        this.log("WebSocket already connected to:", wsUrl);
+        return;
+      }
+
+      // Clean up existing connection before creating new one
+      this.cleanupWebSocket();
+
+      this.wsUrl = wsUrl;
       this.log(`Connecting to WebSocket at ${wsUrl}...`);
 
       this.ws = new WebSocket(wsUrl);
 
       this.ws.on("open", () => {
         this.log("WebSocket connection established.");
+        // Clear any pending reconnect timer since we're connected
+        if (this.reconnectTimer) {
+          clearTimeout(this.reconnectTimer);
+          this.reconnectTimer = null;
+        }
       });
 
       this.ws.on("message", (message) => {
-
-	this.log("Received message:", message);
+        this.log("Received message:", message);
 
         try {
           const data = JSON.parse(message);
@@ -35,9 +52,46 @@ module.exports = NodeHelper.create({
 
       this.ws.on("close", () => {
         this.log("WebSocket connection closed. Retrying in 5s...");
-        setTimeout(() => this.socketNotificationReceived("INIT_WEBSOCKET_SGP30", wsUrl), 5000);
+        // Clear old timer if it exists
+        if (this.reconnectTimer) {
+          clearTimeout(this.reconnectTimer);
+        }
+        // Schedule reconnect
+        this.reconnectTimer = setTimeout(() => {
+          this.reconnectTimer = null;
+          if (this.wsUrl) {
+            this.socketNotificationReceived("INIT_WEBSOCKET_SGP30", this.wsUrl);
+          }
+        }, 5000);
       });
     }
+  },
+
+  cleanupWebSocket() {
+    // Clear reconnect timer
+    if (this.reconnectTimer) {
+      clearTimeout(this.reconnectTimer);
+      this.reconnectTimer = null;
+    }
+
+    // Clean up existing WebSocket connection
+    if (this.ws) {
+      // Remove all event listeners to prevent memory leaks
+      this.ws.removeAllListeners();
+      
+      // Close the connection if it's still open
+      if (this.ws.readyState === WebSocket.OPEN || this.ws.readyState === WebSocket.CONNECTING) {
+        this.ws.close();
+      }
+      
+      this.ws = null;
+    }
+  },
+
+  stop() {
+    this.log("Stopping MMM-SGP30Display node helper...");
+    this.cleanupWebSocket();
+    this.wsUrl = null;
   },
 
   log(...args) {

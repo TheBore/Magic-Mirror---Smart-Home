@@ -30,6 +30,10 @@ const { PvRecorder } = require("@picovoice/pvrecorder-node");
 module.exports = NodeHelper.create({
   start: function() {
     console.log("Starting node_helper for: " + this.name);
+    this.recorder = null;
+    this.porcupine = null;
+    this.isInterrupted = false;
+    this.recorderPromise = null;
   },
 
   socketNotificationReceived: function(notification, payload) {
@@ -51,7 +55,10 @@ module.exports = NodeHelper.create({
   },
 
   setupAudioRecorder: async function() {
-    const porcupine = new Porcupine(
+    // Clean up existing recorder before creating new one
+    this.cleanupAudioRecorder();
+
+    this.porcupine = new Porcupine(
       this.config.picovoiceKey,
       [BuiltinKeyword[this.config.picovoiceWord]],
       [0.65]
@@ -61,9 +68,9 @@ module.exports = NodeHelper.create({
     }
     this.audio = [];
 
-    const frameLength = porcupine.frameLength;
+    const frameLength = this.porcupine.frameLength;
     const silenceDuration = this.config.picovoiceSilenceTime * 16000 / frameLength;
-    let silenceFrames = 0;
+    this.silenceFrames = 0;
     let isSilenceDetected = false;
 
     // Experimental values for PvRecorder constructor
@@ -72,7 +79,7 @@ module.exports = NodeHelper.create({
     const logOverflow = false;
     const logSilence = false;
 
-    const recorder = new PvRecorder(
+    this.recorder = new PvRecorder(
       audioDeviceIndex,
       frameLength,
       bufferSizeMSec,
@@ -80,57 +87,112 @@ module.exports = NodeHelper.create({
       logSilence
     );
 
-
-    recorder.start();
+    this.recorder.start();
 
     if (this.config.debug) {
-      console.log(`Using device: ${recorder.getSelectedDevice()}...`);
+      console.log(`Using device: ${this.recorder.getSelectedDevice()}...`);
       console.log(`Listening for wake word: ${this.config.picovoiceWord}`);
     }
 
-
-    let isInterrupted = false;
+    this.isInterrupted = false;
     this.backgroundNoiseLevel = 0;
     this.backgroundNoiseSamples = 0;
 
-    while (!isInterrupted) {
-      const pcm = await recorder.read();
+    // Store the promise so we can track the async operation
+    this.recorderPromise = (async () => {
+      while (!this.isInterrupted && this.recorder) {
+        try {
+          const pcm = await this.recorder.read();
 
-      if (this.state === 'recording') {
-        this.audio.push(...pcm);
-      }
+          if (this.state === 'recording') {
+            // Limit audio buffer size to prevent memory leak
+            if (this.audio.length > 16000 * 60) { // Max 60 seconds at 16kHz
+              console.log("Audio buffer limit reached, clearing old data");
+              this.audio = [];
+            }
+            this.audio.push(...pcm);
+          }
 
-      // Let's try and detect X seconds of silence.
-      this.updateBackgroundNoiseLevel(pcm);
-      this.detectSilence(pcm);
+          // Let's try and detect X seconds of silence.
+          this.updateBackgroundNoiseLevel(pcm);
+          this.detectSilence(pcm);
 
-      if (this.silenceFrames >= silenceDuration) {
-        if (!isSilenceDetected && this.state === 'recording') {
-          console.log("Silence detected...");
-          this.stopRecording();
-          isSilenceDetected = true;
+          if (this.silenceFrames >= silenceDuration) {
+            if (!isSilenceDetected && this.state === 'recording') {
+              console.log("Silence detected...");
+              this.stopRecording();
+              isSilenceDetected = true;
+            }
+            // Perform any action when silence is detected for the specified duration
+            // For example, stop recording, trigger an event, etc.
+          } else {
+            isSilenceDetected = false;
+          }
+
+          // Now try detect trigger-word.
+          if (this.porcupine) {
+            const keywordIndex = this.porcupine.process(pcm);
+            if (keywordIndex >= 0) {
+              Log.info('Keyword detected: ' + this.config.picovoiceWord);
+              this.sendSocketNotification('KEYWORD_DETECTED', this.config.picovoiceWord);
+              this.startRecording();
+            }
+          }
+        } catch (error) {
+          if (!this.isInterrupted) {
+            console.error("Error in audio recorder loop:", error);
+          }
+          break;
         }
-        // Perform any action when silence is detected for the specified duration
-        // For example, stop recording, trigger an event, etc.
-      } else {
-        isSilenceDetected = false;
       }
+    })();
+  },
 
-      // Now try detect trigger-word.
-      const keywordIndex = porcupine.process(pcm);
-      if (keywordIndex >= 0) {
-        Log.info('Keyword detected: ' + this.config.picovoiceWord);
-        this.sendSocketNotification('KEYWORD_DETECTED', this.config.picovoiceWord);
-        this.startRecording();
+  cleanupAudioRecorder: function() {
+    this.isInterrupted = true;
+
+    if (this.recorder) {
+      try {
+        if (this.recorder.isRecording()) {
+          this.recorder.stop();
+        }
+        this.recorder.release();
+      } catch (error) {
+        console.error("Error releasing recorder:", error);
       }
+      this.recorder = null;
     }
 
-    // Stop the recorder when the process is interrupted
-    process.on("SIGINT", function () {
-      isInterrupted = true;
-      recorder.release();
-      process.exit();
-    });
+    if (this.porcupine) {
+      try {
+        this.porcupine.release();
+      } catch (error) {
+        console.error("Error releasing porcupine:", error);
+      }
+      this.porcupine = null;
+    }
+
+    // Clear audio buffer
+    if (this.audio) {
+      this.audio = [];
+    }
+
+    this.recorderPromise = null;
+  },
+
+  stop: function() {
+    console.log("Stopping MMM-WhisperGPT node helper...");
+    this.cleanupAudioRecorder();
+    
+    // Kill player if running
+    if (this.player !== false && this.player) {
+      try {
+        this.player.kill('SIGINT');
+      } catch (error) {
+        console.error("Error killing player:", error);
+      }
+      this.player = false;
+    }
   },
 
   updateBackgroundNoiseLevel: function(pcm) {
