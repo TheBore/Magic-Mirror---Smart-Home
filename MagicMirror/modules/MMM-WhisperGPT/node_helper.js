@@ -153,9 +153,7 @@ module.exports = NodeHelper.create({
 
     if (this.recorder) {
       try {
-        if (this.recorder.isRecording()) {
-          this.recorder.stop();
-        }
+        this.recorder.stop();
         this.recorder.release();
       } catch (error) {
         console.error("Error releasing recorder:", error);
