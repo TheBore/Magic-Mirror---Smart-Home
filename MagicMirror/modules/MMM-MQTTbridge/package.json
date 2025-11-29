@@ -1,0 +1,27 @@
+{
+  "name": "MMM-MQTTbridge",
+  "version": "2.2.4",
+  "description": "NOTIFICATION <-> MQTT module for MagicMirror",
+  "main": "index.js",
+  "scripts": {
+    "postinstall": "./postinstall"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sergge1/MMM-MQTTbridge.git"
+  },
+  "keywords": [
+    "MagicMirror",
+    "MQTT"
+  ],
+  "author": "sergge1",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sergge1/MMM-MQTTbridge/issues"
+  },
+  "homepage": "https://github.com/sergge1/MMM-MQTTbridge#readme",
+  "dependencies": {
+    "mqtt": "5.10.4",
+    "jsonpath-plus": "10.3.0"
+  }
+}
