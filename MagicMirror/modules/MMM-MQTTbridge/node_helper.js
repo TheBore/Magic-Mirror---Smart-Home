@@ -20,6 +20,7 @@ module.exports = NodeHelper.create({
     self.clients = [];
     self.started = false;
     self.config = {};
+    self.subscribed = {}; // Track which clients have been subscribed
 
     self.notiHook = {}
     self.notiMqttCommands = {}
@@ -39,7 +40,18 @@ module.exports = NodeHelper.create({
     if (self.started){
       var client;
 
+      // If client exists and is already connected and subscribed, don't do anything
+      if (typeof self.clients[self.config.mqttServer] !== "undefined" && 
+          self.clients[self.config.mqttServer].connected == true && 
+          self.subscribed[self.config.mqttServer] == true) {
+        return; // Already connected and subscribed, no need to do anything
+      }
+
       if (typeof self.clients[self.config.mqttServer] === "undefined" || self.clients[self.config.mqttServer].connected == false) {
+        // Reset subscription status when creating a new client or reconnecting
+        if (typeof self.clients[self.config.mqttServer] !== "undefined" && self.clients[self.config.mqttServer].connected == false) {
+          self.subscribed[self.config.mqttServer] = false;
+        }
         let options = { "clean": self.config.mqttConfig.clean }
         if (typeof self.config.mqttConfig.will !== "undefined"){
           options["will"] = self.config.mqttConfig.will
@@ -74,9 +86,11 @@ module.exports = NodeHelper.create({
         }
 
         self.clients[self.config.mqttServer] = client;
+        self.subscribed[self.config.mqttServer] = false; // Mark as not subscribed yet
 
         client.on('connect', function () {
-          if (self.config.mqttConfig.listenMqtt){
+          // Only subscribe if we haven't already subscribed for this client
+          if (!self.subscribed[self.config.mqttServer] && self.config.mqttConfig.listenMqtt){
             for (var i = 0; i < self.mqttHook.length; i++) {
               let curQos = self.mqttHook[i].qos || self.config.mqttConfig.qos
               let curOptions = self.mqttHook[i].options || {}
@@ -84,6 +98,7 @@ module.exports = NodeHelper.create({
               client.subscribe(self.mqttHook[i].mqttTopic, curOptions);
               console.log("[MQTT bridge] Subscribed to the topic: " + self.mqttHook[i].mqttTopic +" with options: "+JSON.stringify(curOptions));
             }
+            self.subscribed[self.config.mqttServer] = true; // Mark as subscribed
           }
 
           self.sendSocketNotification('CONNECTED_AND_SUBSCRIBED')
@@ -97,6 +112,7 @@ module.exports = NodeHelper.create({
         client.on('offline', function () { //MQTT library function. Returns OFFLINE when the client (our code) is not connected.
           console.log("[MQTT bridge] Could not establish connection to MQTT broker");
           self.sendSocketNotification('ERROR', { type: 'notification', title: '[MMM-MQTTbridge]', message: "MQTT broker can't be reached" });
+          self.subscribed[self.config.mqttServer] = false; // Reset subscription status when going offline
           client.end();
         });
 
