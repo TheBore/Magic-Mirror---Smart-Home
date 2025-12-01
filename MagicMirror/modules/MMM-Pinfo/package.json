@@ -1,0 +1,25 @@
+{
+  "name": "mmm-pinfo",
+  "version": "1.0.1",
+  "description": "An informational module for MagicMirror².",
+  "main": "MMM-Pinfo.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SalekurPolas/MMM-Pinfo.git"
+  },
+  "keywords": [
+    "magicmirror",
+    "module",
+    "raspberrypi",
+    "node"
+  ],
+  "author": "Salekur Rahaman",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SalekurPolas/MMM-Pinfo/issues"
+  },
+  "homepage": "https://github.com/SalekurPolas/MMM-Pinfo#readme",
+  "dependencies": {
+    "systeminformation": "^5.27.1"
+  }
+}
