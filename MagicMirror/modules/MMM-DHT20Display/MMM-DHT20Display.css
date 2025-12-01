@@ -1,6 +1,19 @@
 .MMM-DHT20Display {
   width: 100%;
   max-width: 400px;
+  padding: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.MMM-DHT20Display h3 {
+  text-align: left;
+  font-size: 0.9em;
+  margin: 0 0 8px 0;
+  padding-bottom: 5px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  opacity: 0.9;
 }
 
 .MMM-DHT20Display .dht20-list {
@@ -12,20 +25,24 @@
 .MMM-DHT20Display .dht20-list li {
   display: flex;
   justify-content: space-between;
-  padding: 2px 0;
-  font-size: 1rem;
-  border-bottom: 1px dotted rgba(255, 255, 255, 0.1); /* optional separator */
+  padding: 3px 0;
+  font-size: 0.75em;
+  border-bottom: 1px dotted rgba(255, 255, 255, 0.08);
 }
 
 .MMM-DHT20Display .key {
   flex: 1;
   text-align: left;
   padding-right: 10px;
-  font-weight: bold;
+  font-weight: 500;
+  opacity: 0.8;
+  font-size: 0.9em;
 }
 
 .MMM-DHT20Display .value {
   flex: 0 0 auto;
   text-align: right;
+  font-weight: 500;
+  font-size: 0.9em;
 }
 
