@@ -1,4 +1,65 @@
-const electron = require('electron');
+// Load electron module
+// When running via 'electron app.js', require('electron') should work correctly
+// However, in some cases it might resolve to a string (the binary path) instead of the module
+let electron;
+try {
+  // Try to require electron - in Electron context, this should work
+  let electronModule = require('electron');
+  
+  // If it resolved to a string (the electron binary path), try to resolve the actual module
+  if (typeof electronModule === 'string') {
+    console.warn('[MMM-Screencast] electron resolved to string, trying to resolve module...');
+    // Try to find the actual electron module
+    const path = require('path');
+    const fs = require('fs');
+    
+    // Try common locations for electron module
+    const possiblePaths = [
+      path.join(__dirname, 'node_modules', 'electron'),
+      path.join(__dirname, '..', '..', 'node_modules', 'electron'),
+      path.join(process.cwd(), 'node_modules', 'electron')
+    ];
+    
+    for (const modulePath of possiblePaths) {
+      const indexPath = path.join(modulePath, 'index.js');
+      if (fs.existsSync(indexPath)) {
+        try {
+          // Clear the require cache and try again
+          delete require.cache[require.resolve('electron')];
+          electronModule = require(modulePath);
+          console.log('[MMM-Screencast] Successfully loaded electron from:', modulePath);
+          break;
+        } catch (e) {
+          // Continue to next path
+        }
+      }
+    }
+    
+    // If still a string, we have a problem
+    if (typeof electronModule === 'string') {
+      console.error('[MMM-Screencast] ERROR: Could not resolve electron module!');
+      console.error('[MMM-Screencast] electron resolved to:', electronModule);
+      console.error('[MMM-Screencast] Please ensure electron is installed in the module directory.');
+      process.exit(1);
+    }
+  }
+  
+  // Verify it has the expected properties
+  if (!electronModule || typeof electronModule !== 'object' || !electronModule.app) {
+    console.error('[MMM-Screencast] ERROR: electron module is invalid!');
+    console.error('[MMM-Screencast] electron type:', typeof electronModule);
+    console.error('[MMM-Screencast] electron has app:', electronModule && 'app' in electronModule);
+    process.exit(1);
+  }
+  
+  electron = electronModule;
+} catch (error) {
+  console.error('[MMM-Screencast] ERROR: Failed to require electron module!');
+  console.error('[MMM-Screencast] Error:', error.message);
+  console.error('[MMM-Screencast] Stack:', error.stack);
+  process.exit(1);
+}
+
 const Positioner = require('electron-positioner');
 const { IpcServer } = require('./ipc.js');
 const { POSITIONS } = require('./constants.js');
@@ -13,13 +74,21 @@ if (process.type === 'renderer') {
   process.exit(1);
 }
 
-// Get app reference
-const app = electron.app;
+// Get app reference - handle different Electron loading scenarios
+let app;
+if (typeof electron === 'object' && electron !== null) {
+  app = electron.app;
+} else {
+  console.error('[MMM-Screencast] electron is not an object! Type:', typeof electron);
+  console.error('[MMM-Screencast] electron value:', electron);
+  process.exit(1);
+}
 
 if (!app) {
   console.error('[MMM-Screencast] electron.app is not available!');
   console.error('[MMM-Screencast] process.type:', process.type);
   console.error('[MMM-Screencast] electron:', typeof electron);
+  console.error('[MMM-Screencast] Available electron properties:', Object.keys(electron || {}));
   process.exit(1);
 }
 
