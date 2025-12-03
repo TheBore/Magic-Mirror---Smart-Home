@@ -34,8 +34,8 @@ const apps = {
       
       child = spawn('npm', ['start'], {
         cwd: modulePath,
-        env: env,
-        stdio: 'inherit' // This will help see errors in the console
+        env: env
+        // stdio defaults to 'pipe' which allows us to attach listeners to stdout/stderr
       });
 
       this.ipc = new IpcClient((self) => {
