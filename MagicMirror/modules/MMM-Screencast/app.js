@@ -8,6 +8,18 @@ const userAgent = 'Mozilla/5.0 (SMART-TV; Linux; Tizen 2.4.0) AppleWebkit/538.1 
 const ipcInstance = new IpcServer();
 const app = electron.app;
 
+// Disable hardware acceleration for headless/Xvfb compatibility
+// This is important when running on systems without a physical display
+if (process.env.ELECTRON_ENABLE_GPU !== "1") {
+  app.disableHardwareAcceleration();
+}
+
+// Add command line switches for better Xvfb/headless compatibility
+app.commandLine.appendSwitch('autoplay-policy', 'no-user-gesture-required');
+app.commandLine.appendSwitch('disable-gpu');
+app.commandLine.appendSwitch('disable-software-rasterizer');
+app.commandLine.appendSwitch('disable-dev-shm-usage'); // Helps with limited /dev/shm on some systems
+
 ipcInstance.on('QUIT', (data, socket) => {
   ipcInstance.emit(socket, 'QUIT_HEARD', {});
   app.quit();

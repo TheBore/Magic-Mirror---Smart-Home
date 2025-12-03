@@ -1,6 +1,7 @@
 const dial = require("peer-dial");
 const http = require('http');
 const express = require('express');
+const path = require('path');
 const { spawn } = require('cross-spawn');
 const { IpcClient } = require('./ipc.js');
 const { MODULE_NOTIFICATIONS } = require('./constants.js');
@@ -21,8 +22,20 @@ const apps = {
     launch: function (launchData, config) {
       const url = "https://www.youtube.com/tv?"+launchData;
       
+      // Pass environment variables to the spawned process, especially DISPLAY for headless systems
+      const env = {
+        ...process.env,
+        // Ensure DISPLAY is set if it exists in the parent process
+        ...(process.env.DISPLAY ? { DISPLAY: process.env.DISPLAY } : {})
+      };
+      
+      // Use __dirname to get the absolute path to this module directory
+      const modulePath = __dirname;
+      
       child = spawn('npm', ['start'], {
-        cwd: 'modules/MMM-Screencast'
+        cwd: modulePath,
+        env: env,
+        stdio: 'inherit' // This will help see errors in the console
       });
 
       this.ipc = new IpcClient((self) => {
