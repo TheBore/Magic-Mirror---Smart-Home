@@ -24,6 +24,10 @@ app.commandLine.appendSwitch('disable-features', 'VizDisplayCompositor');
 // Additional flags for Xvfb compatibility
 app.commandLine.appendSwitch('no-sandbox');
 app.commandLine.appendSwitch('disable-setuid-sandbox');
+// Fix shared memory issues on headless systems
+app.commandLine.appendSwitch('disable-ipc-flooding-protection');
+// Use in-process GPU to avoid shared memory issues
+app.commandLine.appendSwitch('in-process-gpu');
 
 ipcInstance.on('QUIT', (data, socket) => {
   ipcInstance.emit(socket, 'QUIT_HEARD', {});
@@ -72,8 +76,22 @@ app.once('ready', () => {
     }
 
     // Handle window errors
-    screenCastWindow.webContents.on('did-fail-load', (event, errorCode, errorDescription) => {
-      console.error('[MMM-Screencast] Failed to load URL:', errorCode, errorDescription);
+    screenCastWindow.webContents.on('did-fail-load', (event, errorCode, errorDescription, validatedURL, isMainFrame) => {
+      console.error('[MMM-Screencast] Failed to load URL:', errorCode, errorDescription, 'URL:', validatedURL, 'MainFrame:', isMainFrame);
+      // If main frame fails, try to show window anyway after a delay
+      if (isMainFrame && !windowShown) {
+        setTimeout(() => {
+          console.log('[MMM-Screencast] Attempting to show window after load failure');
+          try {
+            screenCastWindow.show();
+            screenCastWindow.focus();
+            windowShown = true;
+            ipcInstance.emit(socket, 'APP_READY', { error: `Load failed: ${errorDescription}` });
+          } catch (error) {
+            console.error('[MMM-Screencast] Error showing window after load failure:', error);
+          }
+        }, 2000);
+      }
     });
 
     screenCastWindow.on('closed', () => {
@@ -94,8 +112,25 @@ app.once('ready', () => {
     screenCastWindow.loadURL(url);
     console.log('[MMM-Screencast] Loading URL:', url);
 
+    // Set up a timeout fallback in case ready-to-show doesn't fire
+    let windowShown = false;
+    const showWindowTimeout = setTimeout(() => {
+      if (!windowShown) {
+        console.warn('[MMM-Screencast] ready-to-show timeout, forcing window show');
+        try {
+          screenCastWindow.show();
+          screenCastWindow.focus();
+          windowShown = true;
+          ipcInstance.emit(socket, 'APP_READY', {});
+        } catch (error) {
+          console.error('[MMM-Screencast] Error in timeout fallback:', error);
+        }
+      }
+    }, 10000); // 10 second timeout
+
      // Show window when page is ready
     screenCastWindow.once('ready-to-show', () => {
+      clearTimeout(showWindowTimeout);
       console.log('[MMM-Screencast] Window ready to show');
 
       // this is messy for autoplay but youtube, due to chrome no longer supports
@@ -156,6 +191,7 @@ app.once('ready', () => {
       try {
         screenCastWindow.show();
         screenCastWindow.focus(); // Ensure window gets focus
+        windowShown = true;
         console.log('[MMM-Screencast] Window shown');
         
         // Verify window is actually visible
@@ -163,11 +199,24 @@ app.once('ready', () => {
           console.log('[MMM-Screencast] Window is visible');
         } else {
           console.warn('[MMM-Screencast] Window show() called but isVisible() returns false');
+          // Try to show again
+          setTimeout(() => {
+            screenCastWindow.show();
+            console.log('[MMM-Screencast] Retried window show');
+          }, 500);
         }
         
         // screenCastWindow.webContents.openDevTools();
-        screenCastWindow.webContents.executeJavaScript(autoPlayScript, true);
-        screenCastWindow.webContents.executeJavaScript(autoCloseScript, true);
+        // Execute scripts with a delay to ensure page is ready
+        setTimeout(() => {
+          screenCastWindow.webContents.executeJavaScript(autoPlayScript, true).catch(err => {
+            console.error('[MMM-Screencast] Error executing autoplay script:', err);
+          });
+          screenCastWindow.webContents.executeJavaScript(autoCloseScript, true).catch(err => {
+            console.error('[MMM-Screencast] Error executing autoclose script:', err);
+          });
+        }, 1000);
+        
         ipcInstance.emit(socket, 'APP_READY', {});
       } catch (error) {
         console.error('[MMM-Screencast] Error showing window:', error);
@@ -175,9 +224,32 @@ app.once('ready', () => {
       }
     });
 
-    // Also handle page load errors
+    // Also handle page load events
     screenCastWindow.webContents.on('did-finish-load', () => {
       console.log('[MMM-Screencast] Page finished loading');
+      // If window hasn't been shown yet, try to show it
+      if (!windowShown) {
+        console.log('[MMM-Screencast] Showing window after page load');
+        try {
+          screenCastWindow.show();
+          screenCastWindow.focus();
+          windowShown = true;
+        } catch (error) {
+          console.error('[MMM-Screencast] Error showing window after load:', error);
+        }
+      }
+    });
+
+    // Handle DOM ready
+    screenCastWindow.webContents.on('dom-ready', () => {
+      console.log('[MMM-Screencast] DOM ready');
+    });
+
+    // Handle any console messages for debugging
+    screenCastWindow.webContents.on('console-message', (event, level, message, line, sourceId) => {
+      if (level >= 2) { // Only log warnings and errors
+        console.log(`[MMM-Screencast] Console [${level}]:`, message);
+      }
     });
   });
 });

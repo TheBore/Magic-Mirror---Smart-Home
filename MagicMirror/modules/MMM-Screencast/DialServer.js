@@ -26,7 +26,13 @@ const apps = {
       const env = {
         ...process.env,
         // Ensure DISPLAY is set if it exists in the parent process
-        ...(process.env.DISPLAY ? { DISPLAY: process.env.DISPLAY } : {})
+        ...(process.env.DISPLAY ? { DISPLAY: process.env.DISPLAY } : {}),
+        // Set TMPDIR to a writable location to avoid shared memory errors
+        TMPDIR: process.env.TMPDIR || '/tmp',
+        // Additional environment variables for Electron on headless systems
+        ELECTRON_NO_ATTACH_CONSOLE: '1',
+        // Suppress some Electron warnings
+        ELECTRON_RUN_AS_NODE: '0'
       };
       
       // Use __dirname to get the absolute path to this module directory
