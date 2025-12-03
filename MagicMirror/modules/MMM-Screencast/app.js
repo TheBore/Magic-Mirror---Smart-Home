@@ -6,28 +6,58 @@ const { POSITIONS } = require('./constants.js');
 // more useragents here: https://developers.whatismybrowser.com/useragents/explore/operating_platform/smart-tv/
 const userAgent = 'Mozilla/5.0 (SMART-TV; Linux; Tizen 2.4.0) AppleWebkit/538.1 (KHTML, like Gecko) SamsungBrowser/1.1 TV Safari/538.1';
 const ipcInstance = new IpcServer();
-const app = electron.app;
 
-// Disable hardware acceleration for headless/Xvfb compatibility
-// This is important when running on systems without a physical display
-if (process.env.ELECTRON_ENABLE_GPU !== "1") {
-  app.disableHardwareAcceleration();
+// Get app reference - ensure we're in the main process
+if (process.type === 'renderer') {
+  console.error('[MMM-Screencast] This script must be run in the main process!');
+  process.exit(1);
 }
 
-// Add command line switches for better Xvfb/headless compatibility
-app.commandLine.appendSwitch('autoplay-policy', 'no-user-gesture-required');
-app.commandLine.appendSwitch('disable-gpu');
-app.commandLine.appendSwitch('disable-software-rasterizer');
-app.commandLine.appendSwitch('disable-dev-shm-usage'); // Helps with limited /dev/shm on some systems
-// Suppress DBus errors on headless systems
-app.commandLine.appendSwitch('disable-features', 'VizDisplayCompositor');
-// Additional flags for Xvfb compatibility
-app.commandLine.appendSwitch('no-sandbox');
-app.commandLine.appendSwitch('disable-setuid-sandbox');
-// Fix shared memory issues on headless systems
-app.commandLine.appendSwitch('disable-ipc-flooding-protection');
-// Use in-process GPU to avoid shared memory issues
-app.commandLine.appendSwitch('in-process-gpu');
+// Get app reference
+const app = electron.app;
+
+if (!app) {
+  console.error('[MMM-Screencast] electron.app is not available!');
+  console.error('[MMM-Screencast] process.type:', process.type);
+  console.error('[MMM-Screencast] electron:', typeof electron);
+  process.exit(1);
+}
+
+// Initialize Electron configuration
+// These need to be set before the app is ready
+try {
+  // Disable hardware acceleration for headless/Xvfb compatibility
+  // This is important when running on systems without a physical display
+  if (process.env.ELECTRON_ENABLE_GPU !== "1") {
+    if (typeof app.disableHardwareAcceleration === 'function') {
+      app.disableHardwareAcceleration();
+    } else {
+      console.warn('[MMM-Screencast] disableHardwareAcceleration is not available');
+    }
+  }
+
+  // Add command line switches for better Xvfb/headless compatibility
+  if (app.commandLine && typeof app.commandLine.appendSwitch === 'function') {
+    app.commandLine.appendSwitch('autoplay-policy', 'no-user-gesture-required');
+    app.commandLine.appendSwitch('disable-gpu');
+    app.commandLine.appendSwitch('disable-software-rasterizer');
+    app.commandLine.appendSwitch('disable-dev-shm-usage'); // Helps with limited /dev/shm on some systems
+    // Suppress DBus errors on headless systems
+    app.commandLine.appendSwitch('disable-features', 'VizDisplayCompositor');
+    // Additional flags for Xvfb compatibility
+    app.commandLine.appendSwitch('no-sandbox');
+    app.commandLine.appendSwitch('disable-setuid-sandbox');
+    // Fix shared memory issues on headless systems
+    app.commandLine.appendSwitch('disable-ipc-flooding-protection');
+    // Use in-process GPU to avoid shared memory issues
+    app.commandLine.appendSwitch('in-process-gpu');
+  } else {
+    console.warn('[MMM-Screencast] app.commandLine is not available');
+  }
+} catch (error) {
+  console.error('[MMM-Screencast] Error initializing Electron configuration:', error);
+  // Don't exit - try to continue anyway
+}
 
 ipcInstance.on('QUIT', (data, socket) => {
   ipcInstance.emit(socket, 'QUIT_HEARD', {});
