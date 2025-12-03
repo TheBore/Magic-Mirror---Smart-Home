@@ -1,0 +1,372 @@
+
+> magicmirror@2.30.0 server
+> node ./serveronly
+
+[2025-12-03 09:54:59.924] [LOG]   Starting MagicMirror: v2.30.0 
+[2025-12-03 09:55:00.021] [LOG]   Loading config ... 
+[2025-12-03 09:55:00.029] [LOG]   config template file not exists, no envsubst 
+[2025-12-03 09:55:02.361] [INFO]  Checking config file /home/pi/MagicMirror/config/config.js ... 
+[2025-12-03 09:55:02.641] [INFO]  Your configuration file doesn't contain syntax errors :) 
+[2025-12-03 09:55:02.644] [INFO]  Checking modules structure configuration ... 
+[2025-12-03 09:55:02.989] [INFO]  Your modules structure configuration doesn't contain errors :) 
+[2025-12-03 09:55:04.383] [LOG]   Loading module helpers ... 
+[2025-12-03 09:55:04.431] [LOG]   No helper found for module: alert. 
+[2025-12-03 09:55:04.535] [LOG]   No helper found for module: MMM-MagicMover. 
+[2025-12-03 09:55:04.569] [LOG]   No helper found for module: clock. 
+[2025-12-03 09:55:04.982] [LOG]   Initializing new module helper ... 
+[2025-12-03 09:55:04.985] [LOG]   Module helper loaded: MMM-SPS30Display 
+[2025-12-03 09:55:05.049] [LOG]   Initializing new module helper ... 
+[2025-12-03 09:55:05.051] [LOG]   Module helper loaded: MMM-DHT20Display 
+[2025-12-03 09:55:05.078] [LOG]   Initializing new module helper ... 
+[2025-12-03 09:55:05.081] [LOG]   Module helper loaded: MMM-SGP30Display 
+[2025-12-03 09:55:09.028] [LOG]   Initializing new module helper ... 
+[2025-12-03 09:55:09.030] [LOG]   Module helper loaded: MMM-WhisperGPT 
+[2025-12-03 09:55:09.935] [LOG]   Initializing new module helper ... 
+[2025-12-03 09:55:09.936] [LOG]   Module helper loaded: MMM-MQTTbridge 
+[2025-12-03 09:55:11.533] [LOG]   Initializing new module helper ... 
+[2025-12-03 09:55:11.534] [LOG]   Module helper loaded: MMM-WhisperGPTAutomatic 
+[2025-12-03 09:55:14.723] [WARN]  [yahoo-finance2] v2 is no longer maintained nor supported.  Please migrate to v3. See https://github.com/gadicc/yahoo-finance2/blob/dev/docs/UPGRADING.md for details. 
+[2025-12-03 09:55:14.794] [LOG]   Initializing new module helper ... 
+[2025-12-03 09:55:14.795] [LOG]   Module helper loaded: MMM-AVStock 
+[2025-12-03 09:55:14.811] [LOG]   Initializing new module helper ... 
+[2025-12-03 09:55:14.813] [LOG]   Module helper loaded: MMM-AQI 
+[2025-12-03 09:55:15.031] [LOG]   Initializing new module helper ... 
+[2025-12-03 09:55:15.032] [LOG]   Module helper loaded: MMM-Pinfo 
+[2025-12-03 09:55:15.363] [LOG]   Initializing new module helper ... 
+[2025-12-03 09:55:15.365] [LOG]   Module helper loaded: MMM-Remote-Control 
+[2025-12-03 09:55:15.373] [LOG]   Initializing new module helper ... 
+[2025-12-03 09:55:15.374] [LOG]   Module helper loaded: MMM-OnScreenMenu 
+[2025-12-03 09:55:15.430] [LOG]   Initializing new module helper ... 
+[2025-12-03 09:55:15.432] [LOG]   Module helper loaded: MMM-LogfileViewer 
+[2025-12-03 09:55:15.901] [LOG]   Initializing new module helper ... 
+[2025-12-03 09:55:15.903] [LOG]   Module helper loaded: calendar 
+[2025-12-03 09:55:16.373] [LOG]   Initializing new module helper ... 
+[2025-12-03 09:55:16.374] [LOG]   Module helper loaded: MMM-Screencast 
+[2025-12-03 09:55:16.385] [LOG]   No helper found for module: MMM-pages. 
+[2025-12-03 09:55:16.388] [LOG]   No helper found for module: MMM-page-indicator. 
+[2025-12-03 09:55:16.390] [LOG]   All module helpers loaded. 
+[2025-12-03 09:55:16.411] [LOG]   Starting server on port 8080 ...  
+[2025-12-03 09:55:16.488] [LOG]   Server started ... 
+[2025-12-03 09:55:16.490] [LOG]   Connecting socket for: MMM-SPS30Display 
+[2025-12-03 09:55:16.493] [LOG]   Connecting socket for: MMM-DHT20Display 
+[2025-12-03 09:55:16.495] [LOG]   Connecting socket for: MMM-SGP30Display 
+[2025-12-03 09:55:16.498] [LOG]   Connecting socket for: MMM-WhisperGPT 
+[2025-12-03 09:55:16.500] [LOG]   Starting node_helper for: MMM-WhisperGPT 
+[2025-12-03 09:55:16.502] [LOG]   Connecting socket for: MMM-MQTTbridge 
+[2025-12-03 09:55:16.504] [LOG]   [MQTT bridge] Module started 
+[2025-12-03 09:55:16.506] [LOG]   Connecting socket for: MMM-WhisperGPTAutomatic 
+[2025-12-03 09:55:16.509] [LOG]   Starting node_helper for: MMM-WhisperGPTAutomatic 
+[2025-12-03 09:55:16.511] [LOG]   Connecting socket for: MMM-AVStock 
+[2025-12-03 09:55:16.513] [LOG]   Connecting socket for: MMM-AQI 
+[2025-12-03 09:55:16.517] [LOG]   MMM-AQI helper started ... 
+[2025-12-03 09:55:16.518] [LOG]   Connecting socket for: MMM-Pinfo 
+[2025-12-03 09:55:16.526] [LOG]   Connecting socket for: MMM-Remote-Control 
+[2025-12-03 09:55:16.528] [LOG]   Starting node helper for: MMM-Remote-Control 
+[2025-12-03 09:55:16.545] [LOG]   Connecting socket for: MMM-OnScreenMenu 
+[2025-12-03 09:55:16.547] [LOG]   Connecting socket for: MMM-LogfileViewer 
+[2025-12-03 09:55:16.549] [LOG]   Starting node helper for: MMM-LogfileViewer 
+[2025-12-03 09:55:16.551] [LOG]   Connecting socket for: calendar 
+[2025-12-03 09:55:16.554] [LOG]   Starting node helper for: calendar 
+[2025-12-03 09:55:16.556] [LOG]   Connecting socket for: MMM-Screencast 
+[2025-12-03 09:55:16.559] [LOG]   Sockets connected & modules started ... 
+[2025-12-03 09:55:16.561] [INFO]  
+>>>   Ready to go! Please point your browser to: http://localhost:8080   <<< 
+[2025-12-03 09:55:17.625] [INFO]  System information:
+### SYSTEM:   manufacturer: ; model: ; virtual: false
+### OS:       platform: linux; distro: Ubuntu; release: 24.04.2 LTS; arch: arm64; kernel: 6.8.0-1041-raspi
+### VERSIONS: electron: undefined; used node: 23.11.1; installed node: 23.11.1; npm: 10.9.2; pm2: 5.4.3
+### OTHER:    timeZone: UTC; ELECTRON_ENABLE_GPU: undefined 
+[2025-12-03 09:55:19.360] [LOG]   Please consider completing the survey at https://bit.ly/yahoo-finance-api-feedback if you haven't already; for more info see https://github.com/gadicc/node-yahoo-finance2/issues/764#issuecomment-2056623851.  This will only be shown once, but you can suppress this message in future with `yahooFinance.suppressNotices(['yahooSurvey'])`. 
+[2025-12-03 09:55:19.449] [LOG]   Fetching crumb and cookies from https://finance.yahoo.com/quote/AAPL... 
+[2025-12-03 09:55:19.901] [ERROR] We expected a redirect to guce.yahoo.com, but got https://finance.yahoo.com/quote/AAPL/ 
+[2025-12-03 09:55:19.903] [ERROR] We'll try to continue anyway - you can safely ignore this if the request succeeds 
+[2025-12-03 09:55:19.912] [LOG]   Success. Cookie expires on Thu Dec 03 2026 15:55:19 GMT+0000 (Coordinated Universal Time) 
+[2025-12-03 09:55:19.920] [LOG]   fetch https://query1.finance.yahoo.com/v1/test/getcrumb 
+[2025-12-03 09:55:20.399] [LOG]   New crumb: 3yjBRfZNlFZ 
+[2025-12-03 09:55:52.343] [LOG]   [MMM-SPS30Display] Connecting to WebSocket at ws://localhost:8069... 
+[2025-12-03 09:55:52.384] [LOG]   [MMM-DHT20Display] Connecting to WebSocket at ws://localhost:8070... 
+[2025-12-03 09:55:52.496] [LOG]   [MMM-SGP30Display] Connecting to WebSocket at ws://localhost:8071... 
+[2025-12-03 09:55:53.204] [LOG]   [
+  'Monitor of Built-in Audio Stereo',
+  'Monitor of Built-in Audio Digital Stereo (HDMI)',
+  'UACDemoV1.0 Mono'
+] 
+[2025-12-03 09:55:54.038] [LOG]   Using device: UACDemoV1.0 Mono... 
+[2025-12-03 09:55:54.039] [LOG]   Listening for wake word: JARVIS 
+[2025-12-03 09:55:54.061] [LOG]   [MQTT bridge] Info: Reading notification configuration: /home/pi/MagicMirror/modules/MMM-MQTTbridge/dict/notiDictionary.js 
+[2025-12-03 09:55:54.067] [LOG]   [MQTT bridge] Info: Reading mqtt configuration: /home/pi/MagicMirror/modules/MMM-MQTTbridge/dict/mqttDictionary.js 
+[2025-12-03 09:55:54.076] [LOG]   [MQTT bridge] MQTT broker uses unencrypted connection with options: {"clean":true} 
+[2025-12-03 09:55:54.448] [LOG]   [MQTT bridge] MQTT broker uses unencrypted connection with options: {"clean":true} 
+[2025-12-03 09:55:54.456] [LOG]   [MQTT bridge] MQTT broker uses unencrypted connection with options: {"clean":true} 
+[2025-12-03 09:55:54.555] [INFO]  MMM-WhisperGPTAutomatic configured and ready to process DHT20 data 
+[2025-12-03 09:55:54.557] [LOG]   [MMM-AVStock] Initialized. 
+[2025-12-03 09:55:54.563] [INFO]  MMM-AQI fetching data for module_10_MMM-AQI: https://api.waqi.info/feed/here/?token=2333cca2b3091a18222272284c29b7e690641ca4 
+[2025-12-03 09:55:54.599] [INFO]  MMM-AQI fetching data for module_10_MMM-AQI: https://api.waqi.info/feed/here/?token=2333cca2b3091a18222272284c29b7e690641ca4 
+[2025-12-03 09:55:54.801] [LOG]   Started watching: /home/pi/MagicMirror/MMM.log 
+[2025-12-03 09:55:54.804] [LOG]   Create new calendarfetcher for url: https://calendar.google.com/calendar/ical/boris.nikolovski99%40gmail.com/private-95750b8cb13767069cd0332b7768274d/basic.ics - Interval: 3600000 
+[2025-12-03 09:55:54.888] [LOG]   [MQTT bridge] MQTT broker uses unencrypted connection with options: {"clean":true} 
+[2025-12-03 09:55:54.895] [INFO]  MMM-AQI fetching data for module_10_MMM-AQI: https://api.waqi.info/feed/here/?token=2333cca2b3091a18222272284c29b7e690641ca4 
+[2025-12-03 09:55:55.108] [LOG]   [MMM-DHT20Display] WebSocket connection established. 
+[2025-12-03 09:55:55.123] [LOG]   [MMM-SPS30Display] WebSocket connection established. 
+[2025-12-03 09:55:55.290] [LOG]   [MQTT bridge] Subscribed to the topic: magicmirror/arduinonano/btnpress/next with options: {"qos":0} 
+[2025-12-03 09:55:55.292] [LOG]   [MQTT bridge] Subscribed to the topic: magicmirror/state with options: {"qos":0} 
+[2025-12-03 09:55:55.421] [ERROR] MMM-AQI fetch error for module_10_MMM-AQI: fetch failed 
+[2025-12-03 09:55:55.430] [ERROR] MMM-AQI fetch error for module_10_MMM-AQI: fetch failed 
+[2025-12-03 09:55:55.438] [ERROR] MMM-AQI fetch error for module_10_MMM-AQI: fetch failed 
+[2025-12-03 09:55:55.456] [LOG]   [MMM-DHT20Display] Received message: <Buffer 7b 22 74 69 6d 65 73 74 61 6d 70 22 3a 20 22 32 30 32 35 2d 31 32 2d 30 33 20 30 39 3a 35 35 3a 35 32 22 2c 20 22 74 65 6d 70 65 72 61 74 75 72 65 5f ... 70 more bytes> 
+[2025-12-03 09:55:55.530] [LOG]   Sending request to OpenAPI: Here are the current environmental sensor readings from a DHT20 sensor:
+
+Temperature: 17.08°C
+Humidity: 56.28%
+Heat Index: 26.53°C
+Humidex: 17.62
+
+Please provide a brief, friendly analysis of these environmental conditions. Include any comfort level assessments and recommendations if appropriate. 
+[2025-12-03 09:55:55.682] [LOG]   [MMM-SGP30Display] WebSocket connection established. 
+[2025-12-03 09:55:58.558] [LOG]   [MMM-SGP30Display] Received message: <Buffer 7b 22 74 69 6d 65 73 74 61 6d 70 22 3a 20 22 32 30 32 35 2d 31 32 2d 30 33 20 30 39 3a 35 35 3a 35 35 22 2c 20 22 65 63 6f 32 5f 70 70 6d 22 3a 20 34 ... 18 more bytes> 
+[2025-12-03 09:56:00.214] [LOG]   OpenAI Response: 
+[2025-12-03 09:56:00.220] [LOG]   {
+  response: 'Based on the DHT20 sensor readings:\n' +
+    '- Temperature: 17.08°C\n' +
+    '- Humidity: 56.28%\n' +
+    '- Heat Index: 26.53°C\n' +
+    '- Humidex: 17.62\n' +
+    '\n' +
+    'The temperature is relatively cool, the humidity level is moderate, and the heat index suggests it feels warmer than the actual temperature. The Humidex value indicates the perceived temperature is close to the actual temperature.\n' +
+    '\n' +
+    'Overall, the conditions seem comfortable, with a slight discrepancy between the actual and perceived temperature. Consider dressing accordingly to stay comfortable indoors or outdoors.'
+} 
+[2025-12-03 09:56:01.323] [LOG]   [MMM-SGP30Display] Received message: <Buffer 7b 22 74 69 6d 65 73 74 61 6d 70 22 3a 20 22 32 30 32 35 2d 31 32 2d 30 33 20 30 39 3a 35 36 3a 30 31 22 2c 20 22 65 63 6f 32 5f 70 70 6d 22 3a 20 34 ... 18 more bytes> 
+[2025-12-03 09:56:03.502] [LOG]   File /home/pi/MagicMirror/MMM.log has been changed 
+[2025-12-03 09:56:06.460] [LOG]   File /home/pi/MagicMirror/MMM.log has been changed 
+[2025-12-03 09:56:06.475] [LOG]   [MMM-SGP30Display] Received message: <Buffer 7b 22 74 69 6d 65 73 74 61 6d 70 22 3a 20 22 32 30 32 35 2d 31 32 2d 30 33 20 30 39 3a 35 36 3a 30 36 22 2c 20 22 65 63 6f 32 5f 70 70 6d 22 3a 20 34 ... 18 more bytes> 
+[2025-12-03 09:56:13.332] [INFO]  Calendar-Fetcher: Broadcasting 62 events from https://calendar.google.com/calendar/ical/boris.nikolovski99%40gmail.com/private-95750b8cb13767069cd0332b7768274d/basic.ics. 
+[2025-12-03 09:56:16.327] [LOG]   screencast stdout: 
+> magicmirror-screencast@0.0.5 start
+> electron app.js
+
+ 
+[2025-12-03 09:56:16.346] [LOG]   screencast stderr: [973381:1203/095613.569443:ERROR:node_bindings.cc(290)] The NODE_OPTION --use-openssl-ca is not supported in Electron
+ 
+[2025-12-03 09:56:16.363] [LOG]   [MMM-SGP30Display] Received message: <Buffer 7b 22 74 69 6d 65 73 74 61 6d 70 22 3a 20 22 32 30 32 35 2d 31 32 2d 30 33 20 30 39 3a 35 36 3a 31 31 22 2c 20 22 65 63 6f 32 5f 70 70 6d 22 3a 20 34 ... 18 more bytes> 
+[2025-12-03 09:56:16.494] [LOG]   [MMM-SGP30Display] Received message: <Buffer 7b 22 74 69 6d 65 73 74 61 6d 70 22 3a 20 22 32 30 32 35 2d 31 32 2d 30 33 20 30 39 3a 35 36 3a 31 36 22 2c 20 22 65 63 6f 32 5f 70 70 6d 22 3a 20 34 ... 18 more bytes> 
+[2025-12-03 09:56:18.877] [LOG]   File /home/pi/MagicMirror/MMM.log has been changed 
+[2025-12-03 09:56:19.270] [LOG]   screencast stderr: [973381:1203/095618.938429:ERROR:object_proxy.cc(623)] Failed to call method: org.freedesktop.DBus.StartServiceByName: object_path= /org/freedesktop/DBus: org.freedesktop.DBus.Error.NoReply: Did not receive a reply. Possible causes include: the remote application did not send a reply, the message bus security policy blocked the reply, the reply timeout expired, or the network connection was broken.
+ 
+[2025-12-03 09:56:21.290] [LOG]   File /home/pi/MagicMirror/MMM.log has been changed 
+[2025-12-03 09:56:21.506] [LOG]   [MMM-SGP30Display] Received message: <Buffer 7b 22 74 69 6d 65 73 74 61 6d 70 22 3a 20 22 32 30 32 35 2d 31 32 2d 30 33 20 30 39 3a 35 36 3a 32 31 22 2c 20 22 65 63 6f 32 5f 70 70 6d 22 3a 20 34 ... 18 more bytes> 
+[2025-12-03 09:56:30.033] [LOG]   [MQTT bridge] MQTT message received. Topic: magicmirror/arduinonano/btnpress/next, message: BTN_PRESS
+ 
+[2025-12-03 09:56:30.041] [LOG]   [MQTT bridge] MQTT message received. Topic: magicmirror/arduinonano/btnpress/next, message: BTN_PRESS
+ 
+[2025-12-03 09:56:30.046] [LOG]   [MQTT bridge] MQTT message received. Topic: magicmirror/arduinonano/btnpress/next, message: BTN_PRESS
+ 
+[2025-12-03 09:56:30.088] [LOG]   [MQTT bridge] MQTT -> NOTI issued: PAGE_INCREMENT, payload: {} 
+[2025-12-03 09:56:30.091] [LOG]   [MQTT bridge] MQTT -> NOTI issued: PAGE_INCREMENT, payload: {} 
+[2025-12-03 09:56:30.095] [LOG]   [MQTT bridge] MQTT -> NOTI issued: PAGE_INCREMENT, payload: {} 
+[2025-12-03 09:56:30.112] [LOG]   [MMM-SGP30Display] Received message: <Buffer 7b 22 74 69 6d 65 73 74 61 6d 70 22 3a 20 22 32 30 32 35 2d 31 32 2d 30 33 20 30 39 3a 35 36 3a 32 36 22 2c 20 22 65 63 6f 32 5f 70 70 6d 22 3a 20 34 ... 18 more bytes> 
+[2025-12-03 09:56:33.543] [LOG]   File /home/pi/MagicMirror/MMM.log has been changed 
+[2025-12-03 09:56:33.665] [LOG]   [MMM-SGP30Display] Received message: <Buffer 7b 22 74 69 6d 65 73 74 61 6d 70 22 3a 20 22 32 30 32 35 2d 31 32 2d 30 33 20 30 39 3a 35 36 3a 33 31 22 2c 20 22 65 63 6f 32 5f 70 70 6d 22 3a 20 34 ... 18 more bytes> 
+[2025-12-03 09:56:34.793] [LOG]   screencast stderr: [973564:1203/095634.783317:ERROR:viz_main_impl.cc(186)] Exiting GPU process due to errors during initialization
+ 
+[2025-12-03 09:56:36.661] [LOG]   [MMM-SGP30Display] Received message: <Buffer 7b 22 74 69 6d 65 73 74 61 6d 70 22 3a 20 22 32 30 32 35 2d 31 32 2d 30 33 20 30 39 3a 35 36 3a 33 36 22 2c 20 22 65 63 6f 32 5f 70 70 6d 22 3a 20 34 ... 18 more bytes> 
+[2025-12-03 09:56:36.739] [LOG]   screencast stderr: [973795:1203/095636.718848:ERROR:gpu_memory_buffer_support_x11.cc(49)] dri3 extension not supported.
+ 
+[2025-12-03 09:56:36.810] [LOG]   screencast stderr: [973623:1203/095636.774699:ERROR:command_buffer_proxy_impl.cc(128)] ContextResult::kTransientFailure: Failed to send GpuControl.CreateCommandBuffer.
+ 
+[2025-12-03 09:56:45.962] [LOG]   File /home/pi/MagicMirror/MMM.log has been changed 
+[2025-12-03 09:56:46.358] [LOG]   [MMM-SGP30Display] Received message: <Buffer 7b 22 74 69 6d 65 73 74 61 6d 70 22 3a 20 22 32 30 32 35 2d 31 32 2d 30 33 20 30 39 3a 35 36 3a 34 31 22 2c 20 22 65 63 6f 32 5f 70 70 6d 22 3a 20 34 ... 18 more bytes> 
+[2025-12-03 09:56:46.741] [LOG]   [MMM-SGP30Display] Received message: <Buffer 7b 22 74 69 6d 65 73 74 61 6d 70 22 3a 20 22 32 30 32 35 2d 31 32 2d 30 33 20 30 39 3a 35 36 3a 34 36 22 2c 20 22 65 63 6f 32 5f 70 70 6d 22 3a 20 34 ... 18 more bytes> 
+[2025-12-03 09:56:49.058] [LOG]   [MQTT bridge] MQTT message received. Topic: magicmirror/arduinonano/btnpress/next, message: BTN_PRESS
+ 
+[2025-12-03 09:56:49.117] [LOG]   [MQTT bridge] MQTT -> NOTI issued: PAGE_INCREMENT, payload: {} 
+[2025-12-03 09:56:50.156] [INFO]  MMM-AQI fetching data for module_10_MMM-AQI: https://api.waqi.info/feed/here/?token=2333cca2b3091a18222272284c29b7e690641ca4 
+[2025-12-03 09:56:51.863] [LOG]   [MQTT bridge] MQTT message received. Topic: magicmirror/arduinonano/btnpress/next, message: BTN_PRESS
+ 
+[2025-12-03 09:56:52.011] [LOG]   [MQTT bridge] MQTT -> NOTI issued: PAGE_INCREMENT, payload: {} 
+[2025-12-03 09:56:52.017] [LOG]   [MMM-SGP30Display] Received message: <Buffer 7b 22 74 69 6d 65 73 74 61 6d 70 22 3a 20 22 32 30 32 35 2d 31 32 2d 30 33 20 30 39 3a 35 36 3a 35 31 22 2c 20 22 65 63 6f 32 5f 70 70 6d 22 3a 20 34 ... 18 more bytes> 
+[2025-12-03 09:56:57.117] [LOG]   [MQTT bridge] MQTT message received. Topic: magicmirror/arduinonano/btnpress/next, message: BTN_PRESS
+ 
+[2025-12-03 09:56:57.156] [LOG]   screencast stdout: 
+> magicmirror-screencast@0.0.5 start
+> electron app.js
+
+ 
+[2025-12-03 09:56:57.212] [LOG]   [MQTT bridge] MQTT -> NOTI issued: PAGE_INCREMENT, payload: {} 
+[2025-12-03 09:56:57.283] [LOG]   [MMM-DHT20Display] Received message: <Buffer 7b 22 74 69 6d 65 73 74 61 6d 70 22 3a 20 22 32 30 32 35 2d 31 32 2d 30 33 20 30 39 3a 35 36 3a 35 33 22 2c 20 22 74 65 6d 70 65 72 61 74 75 72 65 5f ... 70 more bytes> 
+[2025-12-03 09:56:57.316] [LOG]   [MMM-SGP30Display] Received message: <Buffer 7b 22 74 69 6d 65 73 74 61 6d 70 22 3a 20 22 32 30 32 35 2d 31 32 2d 30 33 20 30 39 3a 35 36 3a 35 36 22 2c 20 22 65 63 6f 32 5f 70 70 6d 22 3a 20 34 ... 18 more bytes> 
+[2025-12-03 09:57:00.254] [LOG]   File /home/pi/MagicMirror/MMM.log has been changed 
+[2025-12-03 09:57:00.261] [LOG]   screencast stderr: [974073:1203/095658.871737:ERROR:node_bindings.cc(290)] The NODE_OPTION --use-openssl-ca is not supported in Electron
+ 
+[2025-12-03 09:57:00.357] [INFO]  MMM-AQI data fetched successfully for module_10_MMM-AQI 
+[2025-12-03 09:57:02.950] [LOG]   [MMM-SGP30Display] Received message: <Buffer 7b 22 74 69 6d 65 73 74 61 6d 70 22 3a 20 22 32 30 32 35 2d 31 32 2d 30 33 20 30 39 3a 35 37 3a 30 31 22 2c 20 22 65 63 6f 32 5f 70 70 6d 22 3a 20 34 ... 18 more bytes> 
+[2025-12-03 09:57:02.954] [LOG]   File /home/pi/MagicMirror/MMM.log has been changed 
+[2025-12-03 09:57:07.860] [LOG]   File /home/pi/MagicMirror/MMM.log has been changed 
+[2025-12-03 09:57:08.267] [LOG]   [MMM-SGP30Display] Received message: <Buffer 7b 22 74 69 6d 65 73 74 61 6d 70 22 3a 20 22 32 30 32 35 2d 31 32 2d 30 33 20 30 39 3a 35 37 3a 30 36 22 2c 20 22 65 63 6f 32 5f 70 70 6d 22 3a 20 34 ... 18 more bytes> 
+[2025-12-03 09:57:10.372] [LOG]   [MQTT bridge] MQTT message received. Topic: magicmirror/arduinonano/btnpress/next, message: BTN_PRESS
+ 
+[2025-12-03 09:57:10.433] [LOG]   [MQTT bridge] MQTT -> NOTI issued: PAGE_INCREMENT, payload: {} 
+[2025-12-03 09:57:12.008] [LOG]   [MMM-SGP30Display] Received message: <Buffer 7b 22 74 69 6d 65 73 74 61 6d 70 22 3a 20 22 32 30 32 35 2d 31 32 2d 30 33 20 30 39 3a 35 37 3a 31 31 22 2c 20 22 65 63 6f 32 5f 70 70 6d 22 3a 20 34 ... 18 more bytes> 
+[2025-12-03 09:57:17.056] [LOG]   screencast stderr: [974282:1203/095714.051019:ERROR:viz_main_impl.cc(186)] Exiting GPU process due to errors during initialization
+[974327:1203/095715.695437:ERROR:gpu_memory_buffer_support_x11.cc(49)] dri3 extension not supported.
+ 
+[2025-12-03 09:57:17.071] [LOG]   [MMM-SGP30Display] Received message: <Buffer 7b 22 74 69 6d 65 73 74 61 6d 70 22 3a 20 22 32 30 32 35 2d 31 32 2d 30 33 20 30 39 3a 35 37 3a 31 36 22 2c 20 22 65 63 6f 32 5f 70 70 6d 22 3a 20 34 ... 18 more bytes> 
+[2025-12-03 09:57:19.291] [LOG]   File /home/pi/MagicMirror/MMM.log has been changed 
+[2025-12-03 09:57:21.472] [LOG]   File /home/pi/MagicMirror/MMM.log has been changed 
+[2025-12-03 09:57:22.075] [LOG]   [MMM-SGP30Display] Received message: <Buffer 7b 22 74 69 6d 65 73 74 61 6d 70 22 3a 20 22 32 30 32 35 2d 31 32 2d 30 33 20 30 39 3a 35 37 3a 32 31 22 2c 20 22 65 63 6f 32 5f 70 70 6d 22 3a 20 34 ... 18 more bytes> 
+[2025-12-03 09:57:25.228] [LOG]   screencast stdout: 
+> magicmirror-screencast@0.0.5 start
+> electron app.js
+
+ 
+[2025-12-03 09:57:25.356] [LOG]   screencast stderr: [974573:1203/095725.310482:ERROR:node_bindings.cc(290)] The NODE_OPTION --use-openssl-ca is not supported in Electron
+ 
+[2025-12-03 09:57:27.178] [LOG]   [MMM-SGP30Display] Received message: <Buffer 7b 22 74 69 6d 65 73 74 61 6d 70 22 3a 20 22 32 30 32 35 2d 31 32 2d 30 33 20 30 39 3a 35 37 3a 32 37 22 2c 20 22 65 63 6f 32 5f 70 70 6d 22 3a 20 34 ... 18 more bytes> 
+[2025-12-03 09:57:29.345] [LOG]   File /home/pi/MagicMirror/MMM.log has been changed 
+[2025-12-03 09:57:33.342] [LOG]   screencast stderr: [974667:1203/095731.140072:ERROR:viz_main_impl.cc(186)] Exiting GPU process due to errors during initialization
+[974726:1203/095732.185482:ERROR:gpu_memory_buffer_support_x11.cc(49)] dri3 extension not supported.
+ 
+[2025-12-03 09:57:33.374] [LOG]   [MMM-SGP30Display] Received message: <Buffer 7b 22 74 69 6d 65 73 74 61 6d 70 22 3a 20 22 32 30 32 35 2d 31 32 2d 30 33 20 30 39 3a 35 37 3a 33 32 22 2c 20 22 65 63 6f 32 5f 70 70 6d 22 3a 20 34 ... 18 more bytes> 
+[2025-12-03 09:57:35.499] [LOG]   File /home/pi/MagicMirror/MMM.log has been changed 
+[2025-12-03 09:57:37.300] [LOG]   [MMM-SGP30Display] Received message: <Buffer 7b 22 74 69 6d 65 73 74 61 6d 70 22 3a 20 22 32 30 32 35 2d 31 32 2d 30 33 20 30 39 3a 35 37 3a 33 37 22 2c 20 22 65 63 6f 32 5f 70 70 6d 22 3a 20 34 ... 18 more bytes> 
+[2025-12-03 09:57:41.407] [LOG]   File /home/pi/MagicMirror/MMM.log has been changed 
+[2025-12-03 09:57:42.324] [LOG]   [MMM-SGP30Display] Received message: <Buffer 7b 22 74 69 6d 65 73 74 61 6d 70 22 3a 20 22 32 30 32 35 2d 31 32 2d 30 33 20 30 39 3a 35 37 3a 34 32 22 2c 20 22 65 63 6f 32 5f 70 70 6d 22 3a 20 34 ... 18 more bytes> 
+[2025-12-03 09:57:44.584] [LOG]   File /home/pi/MagicMirror/MMM.log has been changed 
+[2025-12-03 09:57:49.247] [LOG]   File /home/pi/MagicMirror/MMM.log has been changed 
+[2025-12-03 09:57:49.258] [LOG]   [MMM-SGP30Display] Received message: <Buffer 7b 22 74 69 6d 65 73 74 61 6d 70 22 3a 20 22 32 30 32 35 2d 31 32 2d 30 33 20 30 39 3a 35 37 3a 34 37 22 2c 20 22 65 63 6f 32 5f 70 70 6d 22 3a 20 34 ... 18 more bytes> 
+[2025-12-03 09:57:51.403] [LOG]   File /home/pi/MagicMirror/MMM.log has been changed 
+[2025-12-03 09:57:52.453] [LOG]   [MMM-SGP30Display] Received message: <Buffer 7b 22 74 69 6d 65 73 74 61 6d 70 22 3a 20 22 32 30 32 35 2d 31 32 2d 30 33 20 30 39 3a 35 37 3a 35 32 22 2c 20 22 65 63 6f 32 5f 70 70 6d 22 3a 20 34 ... 18 more bytes> 
+[2025-12-03 09:57:57.080] [LOG]   File /home/pi/MagicMirror/MMM.log has been changed 
+[2025-12-03 09:57:57.099] [LOG]   [MMM-DHT20Display] Received message: <Buffer 7b 22 74 69 6d 65 73 74 61 6d 70 22 3a 20 22 32 30 32 35 2d 31 32 2d 30 33 20 30 39 3a 35 37 3a 35 36 22 2c 20 22 74 65 6d 70 65 72 61 74 75 72 65 5f ... 70 more bytes> 
+[2025-12-03 09:57:57.249] [LOG]   Sending request to OpenAPI: Here are the current environmental sensor readings from a DHT20 sensor:
+
+Temperature: 17.08°C
+Humidity: 56.43%
+Heat Index: 26.51°C
+Humidex: 17.64
+
+Please provide a brief, friendly analysis of these environmental conditions. Include any comfort level assessments and recommendations if appropriate. 
+[2025-12-03 09:57:57.954] [LOG]   [MMM-SGP30Display] Received message: <Buffer 7b 22 74 69 6d 65 73 74 61 6d 70 22 3a 20 22 32 30 32 35 2d 31 32 2d 30 33 20 30 39 3a 35 37 3a 35 37 22 2c 20 22 65 63 6f 32 5f 70 70 6d 22 3a 20 34 ... 18 more bytes> 
+[2025-12-03 09:57:59.551] [LOG]   OpenAI Response: 
+[2025-12-03 09:57:59.559] [LOG]   {
+  response: 'Based on the DHT20 sensor readings:\n' +
+    '- Temperature: 17.08°C\n' +
+    '- Humidity: 56.43%\n' +
+    '- Heat Index: 26.51°C\n' +
+    '- Humidex: 17.64\n' +
+    '\n' +
+    'The temperature is cool, the humidity level is moderate, and the heat index and Humidex suggest a slightly warmer perceived temperature compared to the actual temperature.\n' +
+    '\n' +
+    "These conditions indicate a comfortable environment overall, with a minor difference between the actual and perceived temperature. It's advisable to dress appropriately for the actual temperature but be mindful of the slightly warmer perceived temperature."
+} 
+[2025-12-03 09:57:59.566] [LOG]   screencast stdout: 
+> magicmirror-screencast@0.0.5 start
+> electron app.js
+
+ 
+[2025-12-03 09:58:01.742] [LOG]   File /home/pi/MagicMirror/MMM.log has been changed 
+[2025-12-03 09:58:02.036] [LOG]   screencast stderr: [975286:1203/095802.020486:ERROR:node_bindings.cc(290)] The NODE_OPTION --use-openssl-ca is not supported in Electron
+ 
+[2025-12-03 09:58:02.487] [LOG]   [MMM-SGP30Display] Received message: <Buffer 7b 22 74 69 6d 65 73 74 61 6d 70 22 3a 20 22 32 30 32 35 2d 31 32 2d 30 33 20 30 39 3a 35 38 3a 30 32 22 2c 20 22 65 63 6f 32 5f 70 70 6d 22 3a 20 34 ... 18 more bytes> 
+[2025-12-03 09:58:06.193] [LOG]   File /home/pi/MagicMirror/MMM.log has been changed 
+[2025-12-03 09:58:07.601] [LOG]   [MMM-SGP30Display] Received message: <Buffer 7b 22 74 69 6d 65 73 74 61 6d 70 22 3a 20 22 32 30 32 35 2d 31 32 2d 30 33 20 30 39 3a 35 38 3a 30 37 22 2c 20 22 65 63 6f 32 5f 70 70 6d 22 3a 20 34 ... 18 more bytes> 
+[2025-12-03 09:58:09.770] [LOG]   File /home/pi/MagicMirror/MMM.log has been changed 
+[2025-12-03 09:58:10.068] [LOG]   screencast stderr: [975371:1203/095810.062840:ERROR:viz_main_impl.cc(186)] Exiting GPU process due to errors during initialization
+ 
+[2025-12-03 09:58:11.270] [LOG]   screencast stderr: [975492:1203/095811.225858:ERROR:gpu_memory_buffer_support_x11.cc(49)] dri3 extension not supported.
+ 
+[2025-12-03 09:58:14.132] [LOG]   File /home/pi/MagicMirror/MMM.log has been changed 
+[2025-12-03 09:58:14.138] [LOG]   [MMM-SGP30Display] Received message: <Buffer 7b 22 74 69 6d 65 73 74 61 6d 70 22 3a 20 22 32 30 32 35 2d 31 32 2d 30 33 20 30 39 3a 35 38 3a 31 32 22 2c 20 22 65 63 6f 32 5f 70 70 6d 22 3a 20 34 ... 18 more bytes> 
+[2025-12-03 09:58:16.296] [LOG]   File /home/pi/MagicMirror/MMM.log has been changed 
+[2025-12-03 09:58:17.655] [LOG]   [MMM-SGP30Display] Received message: <Buffer 7b 22 74 69 6d 65 73 74 61 6d 70 22 3a 20 22 32 30 32 35 2d 31 32 2d 30 33 20 30 39 3a 35 38 3a 31 37 22 2c 20 22 65 63 6f 32 5f 70 70 6d 22 3a 20 34 ... 18 more bytes> 
+[2025-12-03 09:58:21.907] [LOG]   File /home/pi/MagicMirror/MMM.log has been changed 
+[2025-12-03 09:58:22.750] [LOG]   [MMM-SGP30Display] Received message: <Buffer 7b 22 74 69 6d 65 73 74 61 6d 70 22 3a 20 22 32 30 32 35 2d 31 32 2d 30 33 20 30 39 3a 35 38 3a 32 32 22 2c 20 22 65 63 6f 32 5f 70 70 6d 22 3a 20 34 ... 18 more bytes> 
+[2025-12-03 09:58:24.850] [LOG]   File /home/pi/MagicMirror/MMM.log has been changed 
+[2025-12-03 09:58:27.021] [LOG]   File /home/pi/MagicMirror/MMM.log has been changed 
+[2025-12-03 09:58:29.728] [LOG]   File /home/pi/MagicMirror/MMM.log has been changed 
+[2025-12-03 09:58:29.743] [LOG]   [MMM-SGP30Display] Received message: <Buffer 7b 22 74 69 6d 65 73 74 61 6d 70 22 3a 20 22 32 30 32 35 2d 31 32 2d 30 33 20 30 39 3a 35 38 3a 32 37 22 2c 20 22 65 63 6f 32 5f 70 70 6d 22 3a 20 34 ... 18 more bytes> 
+[2025-12-03 09:58:31.976] [LOG]   File /home/pi/MagicMirror/MMM.log has been changed 
+[2025-12-03 09:58:32.732] [LOG]   [MMM-SGP30Display] Received message: <Buffer 7b 22 74 69 6d 65 73 74 61 6d 70 22 3a 20 22 32 30 32 35 2d 31 32 2d 30 33 20 30 39 3a 35 38 3a 33 32 22 2c 20 22 65 63 6f 32 5f 70 70 6d 22 3a 20 34 ... 18 more bytes> 
+[2025-12-03 09:58:34.908] [LOG]   File /home/pi/MagicMirror/MMM.log has been changed 
+[2025-12-03 09:58:43.126] [LOG]   screencast stdout: 
+> magicmirror-screencast@0.0.5 start
+> electron app.js
+
+ 
+[2025-12-03 09:58:43.138] [LOG]   File /home/pi/MagicMirror/MMM.log has been changed 
+[2025-12-03 09:58:43.150] [LOG]   [MMM-SGP30Display] Received message: <Buffer 7b 22 74 69 6d 65 73 74 61 6d 70 22 3a 20 22 32 30 32 35 2d 31 32 2d 30 33 20 30 39 3a 35 38 3a 33 37 22 2c 20 22 65 63 6f 32 5f 70 70 6d 22 3a 20 34 ... 18 more bytes> 
+[2025-12-03 09:58:43.472] [LOG]   [MMM-SGP30Display] Received message: <Buffer 7b 22 74 69 6d 65 73 74 61 6d 70 22 3a 20 22 32 30 32 35 2d 31 32 2d 30 33 20 30 39 3a 35 38 3a 34 32 22 2c 20 22 65 63 6f 32 5f 70 70 6d 22 3a 20 34 ... 18 more bytes> 
+[2025-12-03 09:58:44.396] [LOG]   screencast stderr: [975985:1203/095844.392886:ERROR:node_bindings.cc(290)] The NODE_OPTION --use-openssl-ca is not supported in Electron
+ 
+[2025-12-03 09:58:46.529] [LOG]   File /home/pi/MagicMirror/MMM.log has been changed 
+[2025-12-03 09:58:47.966] [LOG]   [MMM-SGP30Display] Received message: <Buffer 7b 22 74 69 6d 65 73 74 61 6d 70 22 3a 20 22 32 30 32 35 2d 31 32 2d 30 33 20 30 39 3a 35 38 3a 34 37 22 2c 20 22 65 63 6f 32 5f 70 70 6d 22 3a 20 34 ... 18 more bytes> 
+[2025-12-03 09:58:48.040] [LOG]   screencast stderr: [976121:1203/095847.988489:ERROR:viz_main_impl.cc(186)] Exiting GPU process due to errors during initialization
+ 
+[2025-12-03 09:58:49.089] [LOG]   screencast stderr: [976150:1203/095849.050441:ERROR:gpu_memory_buffer_support_x11.cc(49)] dri3 extension not supported.
+ 
+[2025-12-03 09:58:53.070] [LOG]   [MMM-SGP30Display] Received message: <Buffer 7b 22 74 69 6d 65 73 74 61 6d 70 22 3a 20 22 32 30 32 35 2d 31 32 2d 30 33 20 30 39 3a 35 38 3a 35 32 22 2c 20 22 65 63 6f 32 5f 70 70 6d 22 3a 20 34 ... 18 more bytes> 
+[2025-12-03 09:58:55.247] [LOG]   File /home/pi/MagicMirror/MMM.log has been changed 
+[2025-12-03 09:58:59.603] [LOG]   File /home/pi/MagicMirror/MMM.log has been changed 
+[2025-12-03 09:58:59.611] [LOG]   [MMM-SGP30Display] Received message: <Buffer 7b 22 74 69 6d 65 73 74 61 6d 70 22 3a 20 22 32 30 32 35 2d 31 32 2d 30 33 20 30 39 3a 35 38 3a 35 38 22 2c 20 22 65 63 6f 32 5f 70 70 6d 22 3a 20 34 ... 18 more bytes> 
+[2025-12-03 09:58:59.619] [LOG]   [MMM-DHT20Display] Received message: <Buffer 7b 22 74 69 6d 65 73 74 61 6d 70 22 3a 20 22 32 30 32 35 2d 31 32 2d 30 33 20 30 39 3a 35 38 3a 35 37 22 2c 20 22 74 65 6d 70 65 72 61 74 75 72 65 5f ... 68 more bytes> 
+[2025-12-03 09:58:59.740] [LOG]   Sending request to OpenAPI: Here are the current environmental sensor readings from a DHT20 sensor:
+
+Temperature: 17.1°C
+Humidity: 56.49%
+Heat Index: 26.5°C
+Humidex: 17.66
+
+Please provide a brief, friendly analysis of these environmental conditions. Include any comfort level assessments and recommendations if appropriate. 
+[2025-12-03 09:59:02.239] [LOG]   OpenAI Response: 
+[2025-12-03 09:59:02.244] [LOG]   {
+  response: 'Based on the DHT20 sensor readings:\n' +
+    '- Temperature: 17.1°C\n' +
+    '- Humidity: 56.49%\n' +
+    '- Heat Index: 26.5°C\n' +
+    '- Humidex: 17.66\n' +
+    '\n' +
+    'The temperature remains cool, with moderate humidity levels. The heat index and Humidex indicate a slightly warmer perceived temperature compared to the actual temperature, but the difference is minimal.\n' +
+    '\n' +
+    'These readings suggest a comfortable environment overall. Dress according to the actual temperature while considering the slight discrepancy in perceived warmth. Enjoy the pleasant conditions!'
+} 
+[2025-12-03 09:59:03.194] [LOG]   [MMM-SGP30Display] Received message: <Buffer 7b 22 74 69 6d 65 73 74 61 6d 70 22 3a 20 22 32 30 32 35 2d 31 32 2d 30 33 20 30 39 3a 35 39 3a 30 33 22 2c 20 22 65 63 6f 32 5f 70 70 6d 22 3a 20 34 ... 18 more bytes> 
+[2025-12-03 09:59:07.547] [LOG]   File /home/pi/MagicMirror/MMM.log has been changed 
+[2025-12-03 09:59:08.154] [LOG]   [MMM-SGP30Display] Received message: <Buffer 7b 22 74 69 6d 65 73 74 61 6d 70 22 3a 20 22 32 30 32 35 2d 31 32 2d 30 33 20 30 39 3a 35 39 3a 30 38 22 2c 20 22 65 63 6f 32 5f 70 70 6d 22 3a 20 34 ... 18 more bytes> 
+[2025-12-03 09:59:10.390] [LOG]   File /home/pi/MagicMirror/MMM.log has been changed 
+[2025-12-03 09:59:12.569] [LOG]   File /home/pi/MagicMirror/MMM.log has been changed 
+[2025-12-03 09:59:15.441] [LOG]   File /home/pi/MagicMirror/MMM.log has been changed 
+[2025-12-03 09:59:15.453] [LOG]   [MMM-SGP30Display] Received message: <Buffer 7b 22 74 69 6d 65 73 74 61 6d 70 22 3a 20 22 32 30 32 35 2d 31 32 2d 30 33 20 30 39 3a 35 39 3a 31 33 22 2c 20 22 65 63 6f 32 5f 70 70 6d 22 3a 20 34 ... 18 more bytes> 
+[2025-12-03 09:59:17.600] [LOG]   File /home/pi/MagicMirror/MMM.log has been changed 
+[2025-12-03 09:59:18.267] [LOG]   [MMM-SGP30Display] Received message: <Buffer 7b 22 74 69 6d 65 73 74 61 6d 70 22 3a 20 22 32 30 32 35 2d 31 32 2d 30 33 20 30 39 3a 35 39 3a 31 38 22 2c 20 22 65 63 6f 32 5f 70 70 6d 22 3a 20 34 ... 18 more bytes> 
+[2025-12-03 09:59:20.371] [LOG]   File /home/pi/MagicMirror/MMM.log has been changed 
+[2025-12-03 09:59:23.298] [LOG]   File /home/pi/MagicMirror/MMM.log has been changed 
+[2025-12-03 09:59:23.310] [LOG]   [MMM-SGP30Display] Received message: <Buffer 7b 22 74 69 6d 65 73 74 61 6d 70 22 3a 20 22 32 30 32 35 2d 31 32 2d 30 33 20 30 39 3a 35 39 3a 32 33 22 2c 20 22 65 63 6f 32 5f 70 70 6d 22 3a 20 34 ... 18 more bytes> 
+[2025-12-03 09:59:25.468] [LOG]   File /home/pi/MagicMirror/MMM.log has been changed 
+[2025-12-03 09:59:27.647] [LOG]   File /home/pi/MagicMirror/MMM.log has been changed 
+[2025-12-03 09:59:28.397] [LOG]   [MMM-SGP30Display] Received message: <Buffer 7b 22 74 69 6d 65 73 74 61 6d 70 22 3a 20 22 32 30 32 35 2d 31 32 2d 30 33 20 30 39 3a 35 39 3a 32 38 22 2c 20 22 65 63 6f 32 5f 70 70 6d 22 3a 20 34 ... 18 more bytes> 
+[2025-12-03 09:59:33.198] [LOG]   File /home/pi/MagicMirror/MMM.log has been changed 
+[2025-12-03 09:59:33.424] [LOG]   [MMM-SGP30Display] Received message: <Buffer 7b 22 74 69 6d 65 73 74 61 6d 70 22 3a 20 22 32 30 32 35 2d 31 32 2d 30 33 20 30 39 3a 35 39 3a 33 33 22 2c 20 22 65 63 6f 32 5f 70 70 6d 22 3a 20 34 ... 18 more bytes> 
+[2025-12-03 09:59:35.602] [LOG]   File /home/pi/MagicMirror/MMM.log has been changed 
+[2025-12-03 09:59:38.860] [LOG]   File /home/pi/MagicMirror/MMM.log has been changed 
+[2025-12-03 09:59:38.866] [LOG]   [MMM-SGP30Display] Received message: <Buffer 7b 22 74 69 6d 65 73 74 61 6d 70 22 3a 20 22 32 30 32 35 2d 31 32 2d 30 33 20 30 39 3a 35 39 3a 33 38 22 2c 20 22 65 63 6f 32 5f 70 70 6d 22 3a 20 34 ... 18 more bytes> 
+[2025-12-03 09:59:41.069] [LOG]   File /home/pi/MagicMirror/MMM.log has been changed 
+[2025-12-03 09:59:43.172] [LOG]   File /home/pi/MagicMirror/MMM.log has been changed 
+[2025-12-03 09:59:43.542] [LOG]   [MMM-SGP30Display] Received message: <Buffer 7b 22 74 69 6d 65 73 74 61 6d 70 22 3a 20 22 32 30 32 35 2d 31 32 2d 30 33 20 30 39 3a 35 39 3a 34 33 22 2c 20 22 65 63 6f 32 5f 70 70 6d 22 3a 20 34 ... 18 more bytes> 
+[2025-12-03 09:59:46.676] [LOG]   File /home/pi/MagicMirror/MMM.log has been changed 
+[2025-12-03 09:59:48.501] [LOG]   [MMM-SGP30Display] Received message: <Buffer 7b 22 74 69 6d 65 73 74 61 6d 70 22 3a 20 22 32 30 32 35 2d 31 32 2d 30 33 20 30 39 3a 35 39 3a 34 38 22 2c 20 22 65 63 6f 32 5f 70 70 6d 22 3a 20 34 ... 18 more bytes> 
+[2025-12-03 09:59:50.673] [LOG]   File /home/pi/MagicMirror/MMM.log has been changed 
+[2025-12-03 09:59:54.621] [LOG]   File /home/pi/MagicMirror/MMM.log has been changed 
+[2025-12-03 09:59:54.634] [LOG]   [MMM-SGP30Display] Received message: <Buffer 7b 22 74 69 6d 65 73 74 61 6d 70 22 3a 20 22 32 30 32 35 2d 31 32 2d 30 33 20 30 39 3a 35 39 3a 35 33 22 2c 20 22 65 63 6f 32 5f 70 70 6d 22 3a 20 34 ... 18 more bytes> 
+[2025-12-03 09:59:56.818] [LOG]   File /home/pi/MagicMirror/MMM.log has been changed 
+[2025-12-03 09:59:57.800] [LOG]   [MMM-DHT20Display] Received message: <Buffer 7b 22 74 69 6d 65 73 74 61 6d 70 22 3a 20 22 32 30 32 35 2d 31 32 2d 30 33 20 30 39 3a 35 39 3a 35 37 22 2c 20 22 74 65 6d 70 65 72 61 74 75 72 65 5f ... 70 more bytes> 
+[2025-12-03 09:59:58.700] [LOG]   [MMM-SGP30Display] Received message: <Buffer 7b 22 74 69 6d 65 73 74 61 6d 70 22 3a 20 22 32 30 32 35 2d 31 32 2d 30 33 20 30 39 3a 35 39 3a 35 38 22 2c 20 22 65 63 6f 32 5f 70 70 6d 22 3a 20 34 ... 18 more bytes> 
+[2025-12-03 10:00:03.350] [LOG]   File /home/pi/MagicMirror/MMM.log has been changed 
+[2025-12-03 10:00:03.394] [LOG]   screencast stdout: 
+> magicmirror-screencast@0.0.5 start
+> electron app.js
+
+ 
+[2025-12-03 10:00:03.846] [LOG]   [MMM-SGP30Display] Received message: <Buffer 7b 22 74 69 6d 65 73 74 61 6d 70 22 3a 20 22 32 30 32 35 2d 31 32 2d 30 33 20 31 30 3a 30 30 3a 30 33 22 2c 20 22 65 63 6f 32 5f 70 70 6d 22 3a 20 34 ... 18 more bytes> 
+[2025-12-03 10:00:04.181] [LOG]   screencast stderr: [977497:1203/100003.957184:ERROR:node_bindings.cc(290)] The NODE_OPTION --use-openssl-ca is not supported in Electron
+ 
+[2025-12-03 10:00:07.549] [LOG]   File /home/pi/MagicMirror/MMM.log has been changed 

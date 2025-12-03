@@ -1,0 +1,43 @@
+{
+  "name": "mmm-logfileviewer",
+  "version": "1.0.0",
+  "description": "A MagicMirror² module that displays real-time log file content.",
+  "main": "MMM-LogfileViewer.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "install": "npm install chokidar"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/schlomm/MMM-LogfileViewer.git"
+  },
+  "keywords": [
+    "MagicMirror",
+    "Module",
+    "Log",
+    "Monitoring"
+  ],
+  "author": "Dominik Schlarmann",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/schlomm/MMM-LogfileViewer/issues"
+  },
+  "homepage": "https://github.com/schlomm/MMM-LogfileViewer#readme",
+  "dependencies": {
+    "chokidar": "^4.0.3"
+  },
+  "devDependencies": {
+    "eslint": "^9.11.1",
+    "prettier": "^3.3.3"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "files": [
+    "MMM-LogfileViewer.js",
+    "node_helper.js",
+    "MMM-LogfileViewer.css",
+    "README.md",
+    "LICENSE"
+  ]
+}

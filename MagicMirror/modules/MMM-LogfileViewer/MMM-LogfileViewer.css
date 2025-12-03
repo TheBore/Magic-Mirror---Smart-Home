@@ -1,0 +1,147 @@
+/* MMM-LogfileViewer.css
+ * Styling for MMM-LogfileViewer module
+ * MIT Licensed.
+ */
+
+/* Main container */
+.mmm-logviewer-container {
+    font-family: 'Roboto Mono', 'Consolas', 'Monaco', monospace;
+    line-height: 1.4;
+    max-width: 100%;
+    overflow-x: auto;
+    overflow-y: auto;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+/* Individual log lines */
+.mmm-logviewer-line {
+    margin: 2px 0;
+    padding: 2px 4px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    border-radius: 2px;
+    transition: background-color 0.2s ease;
+    /* Animation support for incremental updates */
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.mmm-logviewer-line:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Log level specific styles */
+.mmm-logviewer-error {
+    color: #ff6b6b;
+    font-weight: bold;
+    background-color: rgba(255, 107, 107, 0.1);
+}
+
+.mmm-logviewer-warn {
+    color: #ffd93d;
+    background-color: rgba(255, 217, 61, 0.1);
+}
+
+.mmm-logviewer-info {
+    color: #6bcf7f;
+}
+
+.mmm-logviewer-debug {
+    color: #888;
+    font-style: italic;
+    opacity: 0.8;
+}
+
+/* Loading state */
+.mmm-logviewer-loading {
+    text-align: center;
+    color: #888;
+    font-style: italic;
+    padding: 20px;
+}
+
+/* Error message styling */
+.mmm-logviewer-error {
+    color: #ff6b6b;
+    text-align: center;
+    padding: 15px;
+    background-color: rgba(255, 107, 107, 0.1);
+    border: 1px solid #ff6b6b;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+/* Empty log file */
+.mmm-logviewer-empty {
+    text-align: center;
+    color: #888;
+    font-style: italic;
+    padding: 20px;
+}
+
+/* Font size classes for predefined sizes */
+.mmm-logviewer-container.small {
+    font-size: 0.9em;
+}
+
+.mmm-logviewer-container.medium {
+    font-size: 1em;
+}
+
+.mmm-logviewer-container.large {
+    font-size: 1.2em;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    .mmm-logviewer-container {
+        font-size: 0.9em;
+    }
+    
+    .mmm-logviewer-line {
+        padding: 1px 2px;
+        margin: 1px 0;
+    }
+}
+
+/* Dark theme optimizations */
+.mmm-logviewer-container {
+    color: #fff;
+}
+
+/* Scrollbar styling for webkit browsers */
+.mmm-logviewer-container::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+.mmm-logviewer-container::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+}
+
+.mmm-logviewer-container::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 3px;
+}
+
+.mmm-logviewer-container::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+/* Animation for new log lines */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.mmm-logviewer-line {
+    animation: fadeIn 0.3s ease-out;
+}
