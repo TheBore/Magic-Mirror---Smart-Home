@@ -19,6 +19,11 @@ app.commandLine.appendSwitch('autoplay-policy', 'no-user-gesture-required');
 app.commandLine.appendSwitch('disable-gpu');
 app.commandLine.appendSwitch('disable-software-rasterizer');
 app.commandLine.appendSwitch('disable-dev-shm-usage'); // Helps with limited /dev/shm on some systems
+// Suppress DBus errors on headless systems
+app.commandLine.appendSwitch('disable-features', 'VizDisplayCompositor');
+// Additional flags for Xvfb compatibility
+app.commandLine.appendSwitch('no-sandbox');
+app.commandLine.appendSwitch('disable-setuid-sandbox');
 
 ipcInstance.on('QUIT', (data, socket) => {
   ipcInstance.emit(socket, 'QUIT_HEARD', {});
@@ -32,6 +37,8 @@ app.once('ready', () => {
   ipcInstance.on('SEND_CONFIG', (data, socket) => {
     const { url, position, width, height, x, y } = data;
 
+    console.log('[MMM-Screencast] Creating window with config:', { url, position, width, height, x, y });
+
     const usingXY = x && y;
 
     // electron
@@ -42,25 +49,54 @@ app.once('ready', () => {
       width: width,
       height: height,
       darkTheme: true,
-      alwayOnTop: true,
+      alwaysOnTop: true, // Fixed typo: was 'alwayOnTop'
       show: false,
       frame: false,
       zoomFactor: 1.0,
       focusable: false,
+      webPreferences: {
+        nodeIntegration: false,
+        contextIsolation: true
+      },
       ...(usingXY ? { x, y } : {})
     };
 
-    const screenCastWindow = new electron.BrowserWindow(windowOptions);
+    let screenCastWindow;
+    try {
+      screenCastWindow = new electron.BrowserWindow(windowOptions);
+      console.log('[MMM-Screencast] Window created successfully');
+    } catch (error) {
+      console.error('[MMM-Screencast] Error creating window:', error);
+      ipcInstance.emit(socket, 'APP_READY', { error: error.message });
+      return;
+    }
+
+    // Handle window errors
+    screenCastWindow.webContents.on('did-fail-load', (event, errorCode, errorDescription) => {
+      console.error('[MMM-Screencast] Failed to load URL:', errorCode, errorDescription);
+    });
+
+    screenCastWindow.on('closed', () => {
+      console.log('[MMM-Screencast] Window closed');
+    });
 
     if (!usingXY && POSITIONS[position]) {
-      const positioner = new Positioner(screenCastWindow);
-      positioner.move(POSITIONS[position]);
+      try {
+        const positioner = new Positioner(screenCastWindow);
+        positioner.move(POSITIONS[position]);
+        console.log('[MMM-Screencast] Window positioned to:', POSITIONS[position]);
+      } catch (error) {
+        console.error('[MMM-Screencast] Error positioning window:', error);
+        // Continue anyway - window will still work
+      }
     }
 
     screenCastWindow.loadURL(url);
+    console.log('[MMM-Screencast] Loading URL:', url);
 
      // Show window when page is ready
     screenCastWindow.once('ready-to-show', () => {
+      console.log('[MMM-Screencast] Window ready to show');
 
       // this is messy for autoplay but youtube, due to chrome no longer supports
       // autoplay
@@ -117,11 +153,31 @@ app.once('ready', () => {
         }
       });
 
-      screenCastWindow.show();
-      // screenCastWindow.webContents.openDevTools();
-      screenCastWindow.webContents.executeJavaScript(autoPlayScript, true);
-      screenCastWindow.webContents.executeJavaScript(autoCloseScript, true);
-      ipcInstance.emit(socket, 'APP_READY', {});
+      try {
+        screenCastWindow.show();
+        screenCastWindow.focus(); // Ensure window gets focus
+        console.log('[MMM-Screencast] Window shown');
+        
+        // Verify window is actually visible
+        if (screenCastWindow.isVisible()) {
+          console.log('[MMM-Screencast] Window is visible');
+        } else {
+          console.warn('[MMM-Screencast] Window show() called but isVisible() returns false');
+        }
+        
+        // screenCastWindow.webContents.openDevTools();
+        screenCastWindow.webContents.executeJavaScript(autoPlayScript, true);
+        screenCastWindow.webContents.executeJavaScript(autoCloseScript, true);
+        ipcInstance.emit(socket, 'APP_READY', {});
+      } catch (error) {
+        console.error('[MMM-Screencast] Error showing window:', error);
+        ipcInstance.emit(socket, 'APP_READY', { error: error.message });
+      }
+    });
+
+    // Also handle page load errors
+    screenCastWindow.webContents.on('did-finish-load', () => {
+      console.log('[MMM-Screencast] Page finished loading');
     });
   });
 });
